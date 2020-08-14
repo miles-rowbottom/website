@@ -13,24 +13,24 @@
 </head>
 <body>
   <div class = "webpage">
-    <div class = "header">
-      <div class = "headerLeft"  style = "grid-area: 1 / 1 / 2 / 2">
-        <img class = "milesLogo" src = "BlogImages/MilesLogo.svg" onclick = "window.open('https://www.miles-rowbottom.github.io/website/Home', '_self');">
+    <div class = "row header">
+      <div class = "headerLeft col-3">
+        <img class = "milesLogo" src = "HomepageImages/MilesLogo.svg" onclick = "window.open('Home', '_self');">
       </div>
-      <div class = "headerCenter" style = "grid-area: 1 / 2 / 2 / 3">
+      <div class = "headerCenter col-6">
         <ul class = "navBar">
           <li class="navBarItem dropdown">
             <a class = "dropdown2" href="#">Blog <i class="fas fa-caret-down"></i></a>
             <div class="dropdownContent">
-              <a class = "personalDropdown" href="https://www.miles-rowbottom.github.io/website/Blog" target = "_blank">Personal</a>
+              <a class = "personalDropdown" href="Blog" target = "_blank">Personal</a>
               <a class = "gyanaDropdown" href="https://www.gyana.com/blog/" target = "_blank">Gyana</a>
               <a class = "sashaLuciaDropdown" href="https://www.sashalucia.net/myblog" target = "_blank">Sasha Lucia</a>
             </div>
           </li>
-          <li class = "home"><a class = "navBarItem" href = "https://www.miles-rowbottom.github.io/website/Home">Home</a></li>
+          <li class = "home"><a class = "navBarItem" href = "Home">Home</a></li>
         </ul>
       </div>
-      <div class = "headerRight">
+      <div class = "headerRight col-3">
         <a class = "signUpButton" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/" target = "_blank">Get in touch</a>
       </div>
     </div>
@@ -81,24 +81,25 @@
         </div>
       </div>
     </div>
-    <div class = "socialGrid">
-      <div class = "socialHeader" style = "grid-area: 1 / 1 / 2 / 12">
-        <h2 class = "getInTouch">Get in touch! I'd love to chat</h2>
-        <p>I prefer to be messaged in my <a class = "linkedinLink" href = "#">LinkedIn DMs</a>, but use whatever platform that makes you feel most comfortable</p>
+    <div class = "table">
+      <div class = "socialHeader row">
+        <h2 style = "margin-left: 20px; margin-right: 20px;">Get in touch! I'd love to chat</h2>
+        <p style = "margin-left: 20px; margin-right: 20px;">I prefer to be messaged in my <a class = "linkedinLink" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/">LinkedIn DMs</a>, but use whatever platform that makes you feel most comfortable</p>
       </div>
-      <div class = "socialLeft" style = "grid-area: 2 / 1 / 3 / 5"></div>
-      <div class = "socialIcon" style = "grid-area: 2 / 5 / 3 / 6">
-        <button class = "linkedinButton socialButton" onclick="window.open('https://www.linkedin.com/in/miles-rowbottom-128040155/','mywindow');"><i class="fab fa-linkedin"></i></button>
+      <div class = "socialRow row" style = "display: flex !important; justify-content: center; margin-bottom: 10px;">
+        <div class = "socialEdge" style = "width: 40.1%;"></div>
+        <div class = "socialIcon">
+          <button class = "linkedinButton socialButton" onclick="window.open('https://www.linkedin.com/in/miles-rowbottom-128040155/','mywindow');"><i class="fab fa-linkedin"></i></button>
+        </div>
+        <div class = "socialIcon">
+          <button class = "socialButton emailButton" onclick="window.open('mailto:miles.rowbottom@gmail.com','mywindow');"><i class="fas fa-envelope-square"></i></button>
+        </div>
+        <div class = "socialIcon">
+          <button class = "socialButton facebookButton" onclick="window.open('https://www.facebook.com/miles64537/','mywindow');"><i class="fab fa-facebook-square"></i></button>
+        </div>
+        <div class = "socialEdge" style = "width: 40.1%;"></div>
       </div>
-      <div class = "socialIcon" style = "grid-area: 2/ 6 / 3 / 7">
-        <button class = "socialButton emailButton" onclick="window.open('mailto:miles.rowbottom@gmail.com','mywindow');"><i class="fas fa-envelope-square"></i></button>
-      </div>
-      <div class = "socialIcon" style = "grid-area: 2 / 7 / 3 / 8">
-        <button class = "socialButton facebookButton" onclick="window.open('https://www.facebook.com/miles64537/','mywindow');"><i class="fab fa-facebook-square"></i></button>
-      </div>
-      <div class = "socialRight" style = "grid-area: 2 / 8 / 3 / 12"></div>
     </div>
-    <div style = "width: 100%; height: 20px;"></div>
   </div>
 </body>
 </html>
