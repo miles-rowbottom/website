@@ -14,10 +14,10 @@
 <body>
   <div class = "webpage">
     <div class = "row header">
-      <div class = "headerLeft col-2">
+      <div class = "headerLeft col-3">
         <img class = "milesLogo" src = "HomepageImages/MilesLogo.svg" onclick = "window.open('Home', '_self');">
       </div>
-      <div class = "headerCenter col-8">
+      <div class = "headerCenter col-6">
         <ul class = "navBar">
           <li class="navBarItem dropdown">
             <a class = "dropdown2" href="#">Blog <i class="fas fa-caret-down"></i></a>
@@ -30,7 +30,7 @@
           <li class = "home"><a class = "navBarItem" href = "Home">Home</a></li>
         </ul>
       </div>
-      <div class = "headerRight col-2">
+      <div class = "headerRight col-3">
         <a class = "signUpButton" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/" target = "_blank">Get in touch</a>
       </div>
     </div>
