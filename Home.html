@@ -186,7 +186,6 @@
         </div>
         <div class = "socialEdge" style = "width: 40.1%;"></div>
       </div>
-      <div style = "width: 100%; height: 20px;"></div>
     </div>
   </div>
 </body>
