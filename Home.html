@@ -13,11 +13,11 @@
 </head>
 <body>
   <div class = "webpage">
-    <div class = "header">
-      <div class = "headerLeft"  style = "grid-area: 1 / 1 / 2 / 2">
+    <div class = "row header">
+      <div class = "headerLeft col-2">
         <img class = "milesLogo" src = "HomepageImages/MilesLogo.svg" onclick = "window.open('Home', '_self');">
       </div>
-      <div class = "headerCenter" style = "grid-area: 1 / 2 / 2 / 3">
+      <div class = "headerCenter col-8">
         <ul class = "navBar">
           <li class="navBarItem dropdown">
             <a class = "dropdown2" href="#">Blog <i class="fas fa-caret-down"></i></a>
@@ -30,7 +30,7 @@
           <li class = "home"><a class = "navBarItem" href = "Home">Home</a></li>
         </ul>
       </div>
-      <div class = "headerRight">
+      <div class = "headerRight col-2">
         <a class = "signUpButton" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/" target = "_blank">Get in touch</a>
       </div>
     </div>
@@ -95,13 +95,10 @@
         </div>
         <div class = "col col-2 shrinkCol"></div>
       </div>
-      <div class = "row" style = "background-color: #F4F5F7;">
-        <div class = "col-12" style = "text-align: center;">
-          <h2>My Writings</h2>
-          <h3 style = "font-weight: normal !important">I've written under several domains, including my own, documenting my life experiences and also using my knowledge to discuss my passions: <span style = "font-weight: bold">data</span> and <span style = "font-weight: bold">technology</span></h3>
-        </div>
+      <div class = "row myWritings">
+        <h2>My Writings</h2>
+        <h3 style = "font-weight: normal !important; margin-left: 20px; margin-right: 20px;">I've written under several domains, including my own, documenting my life experiences and also using my knowledge to discuss my passions: <span style = "font-weight: bold">data</span> and <span style = "font-weight: bold">technology</span></h3>
       </div>
-      <div style = "background-color: #F4F5F7; width: 100%; height: 20px;"></div>
       <div class = "row" style = "background-color: #F4F5F7;">
         <div class = "blogCol col-4" style = "text-align: center;">
           <h3 style = "color: darkRed">The Gyana Blog</h3>
@@ -119,11 +116,11 @@
       <div style = "background-color: #F4F5F7; width: 100%; height: 30px;"></div>
       <div class = "photoBox middlePhoto"></div>
       <div class = "row">
-        <div class = "companyCol col-12" style = "text-align: center;"><h2>My highlights so far</h2>
+        <div class = "companyCol col-12" style = "text-align: center;"><h2>My highlights so far</h2></div>
       </div>
       <div class = "row">
         <div class = "companyCol col-1 disapperBox"></div>
-        <div class = "companyCol col-3 companyImage" style = "height: 100%;">
+        <div class = "companyCol col-3 companyImage">
           <img src = "HomepageImages/GyanaLogo.png" class = "companyImageBox" onclick="window.open('https://www.gyana.com/','mywindow');">
         </div>
         <div class = "companyCol col-1 disapperBox"></div>
@@ -139,7 +136,7 @@
       </div>
       <div class = "row">
         <div class = "companyCol col-1 disapperBox"></div>
-        <div class = "companyCol col-3 companyImage" style = "height: 100%;">
+        <div class = "companyCol col-3 companyImage">
           <img src = "HomepageImages/Lacrosse.png" class = "companyImageBox" onclick="window.open('https://www.uclax.co.uk','mywindow');">
         </div>
         <div class = "companyCol col-1 disapperBox"></div>
@@ -155,7 +152,7 @@
       </div>
       <div class = "row">
         <div class = "companyCol col-1 disapperBox"></div>
-        <div class = "companyCol col-3 companyImage" style = "height: 100%;">
+        <div class = "companyCol col-3 companyImage">
           <img src = "HomepageImages/SU.png" class = "companyImageBox" onclick="window.open('http://www.studentsunionucl.org/','mywindow');">
         </div>
         <div class = "companyCol col-1 disapperBox"></div>
@@ -171,24 +168,26 @@
       </div>
       <div class = "photoBox bottomPhoto"></div>
     </div>
-    <div class = "socialGrid">
-      <div class = "socialHeader" style = "grid-area: 1 / 1 / 2 / 12">
-        <h2 class = "getInTouch">Get in touch! I'd love to chat</h2>
-        <p>I prefer to be messaged in my <a class = "linkedinLink" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/">LinkedIn DMs</a>, but use whatever platform that makes you feel most comfortable</p>
+    <div class = "table">
+      <div class = "socialHeader row">
+        <h2 style = "margin-left: 20px; margin-right: 20px;">Get in touch! I'd love to chat</h2>
+        <p style = "margin-left: 20px; margin-right: 20px;">I prefer to be messaged in my <a class = "linkedinLink" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/">LinkedIn DMs</a>, but use whatever platform that makes you feel most comfortable</p>
       </div>
-      <div class = "socialLeft" style = "grid-area: 2 / 1 / 3 / 5"></div>
-      <div class = "socialIcon" style = "grid-area: 2 / 5 / 3 / 6">
-        <button class = "linkedinButton socialButton" onclick="window.open('https://www.linkedin.com/in/miles-rowbottom-128040155/','mywindow');"><i class="fab fa-linkedin"></i></button>
+      <div class = "socialRow row" style = "display: flex !important; justify-content: center;">
+        <div class = "socialEdge" style = "width: 40.1%;"></div>
+        <div class = "socialIcon">
+          <button class = "linkedinButton socialButton" onclick="window.open('https://www.linkedin.com/in/miles-rowbottom-128040155/','mywindow');"><i class="fab fa-linkedin"></i></button>
+        </div>
+        <div class = "socialIcon">
+          <button class = "socialButton emailButton" onclick="window.open('mailto:miles.rowbottom@gmail.com','mywindow');"><i class="fas fa-envelope-square"></i></button>
+        </div>
+        <div class = "socialIcon">
+          <button class = "socialButton facebookButton" onclick="window.open('https://www.facebook.com/miles64537/','mywindow');"><i class="fab fa-facebook-square"></i></button>
+        </div>
+        <div class = "socialEdge" style = "width: 40.1%;"></div>
       </div>
-      <div class = "socialIcon" style = "grid-area: 2/ 6 / 3 / 7">
-        <button class = "socialButton emailButton" onclick="window.open('mailto:miles.rowbottom@gmail.com','mywindow');"><i class="fas fa-envelope-square"></i></button>
-      </div>
-      <div class = "socialIcon" style = "grid-area: 2 / 7 / 3 / 8">
-        <button class = "socialButton facebookButton" onclick="window.open('https://www.facebook.com/miles64537/','mywindow');"><i class="fab fa-facebook-square"></i></button>
-      </div>
-      <div class = "socialRight" style = "grid-area: 2 / 8 / 3 / 12"></div>
+      <div style = "width: 100%; height: 20px;"></div>
     </div>
-    <div style = "width: 100%; height: 20px;"></div>
   </div>
 </body>
 </html>
