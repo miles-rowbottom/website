@@ -14,6 +14,32 @@ html, body {
   flex-direction: column;
 }
 
+.table {
+  display: table;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.row {
+  display: table-row;
+}
+
 .header {
   background-color: white;
   height: 65px;
@@ -21,44 +47,65 @@ html, body {
   transition: 0.25s;
   font-size: 40px;
   color: darkred;
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
-  padding-left: 5px;
-  padding-right: 5px;
+}
+
+@media screen and (max-width: 3000px) {
+  .headerLeft {
+    width: 25%;
+  }
+  .headerCenter {
+    width: 50%;
+  }
+  .headerRight {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .headerLeft {
+    width: 33.3% !important;
+  }
+  .headerCenter {
+    width: 33.4% !important;
+  }
+  .headerRight {
+    width: 33.3% !important;
+  }
 }
 
 @media screen and (max-width: 660px) {
-    .header {
-      grid-template-columns: 25% 75% 0%;
-    }
+  .headerLeft {
+    width: 25% !important;
+  }
+  .headerCenter {
+    width: 75% !important;
+    justify-content: flex-end !important;
+  }
+  .headerRight {
+    display: none !important;
+  }
 }
-
 
 .header:hover {
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .headerLeft {
-  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px !important;
 }
 
 .milesLogo {
-  height: 50px;
+  height: 45px;
   transition: 0.25s;
   border-radius: 5px;
 }
 
 .milesLogo:hover {
   cursor: pointer;
-  height: 55px;
-}
-
-.miles {
-  color: black !important;
-  font-family: verdana;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .headerCenter {
@@ -66,12 +113,6 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (max-width: 660px) {
-    .headerCenter {
-      justify-content: flex-end !important;
-    }
 }
 
 .navBar {
@@ -157,7 +198,7 @@ html, body {
   transform: translate(0px, 43px);
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 800px) {
     .home {
         display: none !important;
     }
@@ -194,12 +235,6 @@ html, body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 660px) {
-    .headerRight {
-        display: none !important;
-    }
-}
-
 .blogHeader {
   background-position: left;
   background-repeat: no-repeat;
@@ -210,6 +245,12 @@ html, body {
   align-items: center;
   text-align: center;
   min-height: 90vh;
+}
+
+@media screen and (max-width: 800px) {
+  .blogHeader {
+    background-attachment: scroll;
+  }
 }
 
 .blogStripLeft {
@@ -421,18 +462,12 @@ html, body {
    text-decoration: underline;
  }
 
- .socialGrid {
-   display: grid;
-   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
-   grid-template-rows: 110px 120px;
-   align-content: center;
- }
-
  .socialIcon {
+   float: left;
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 100px;
+   width: 6.6%;
  }
 
  .socialHeader {
@@ -456,12 +491,12 @@ html, body {
 
  .socialButton {
    transition: 0.25s;
-   height: 80px;
-   width: 80px;
-   font-size: 92px;
+   height: 40px;
+   width: 40px;
+   font-size: 46px;
    background-color: white;
    border: none;
-   border-radius: 10px;
+   border-radius: 6px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -473,10 +508,6 @@ html, body {
  .socialButton:hover {
    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
    cursor: pointer;
-   height: 88px;
-   width: 88px;
-   font-size: 101px;
-   border-radius: 11px;
  }
 
  .socialButton:active {
@@ -493,4 +524,31 @@ html, body {
 
  .facebookButton {
    color: #4064AD !important;
+ }
+
+ @media only screen and (max-width: 1000px) {
+   .socialEdge {
+     width: 35%;
+   }
+   .socialIcon {
+     width: 10%;
+   }
+ }
+
+ @media only screen and (max-width: 660px) {
+   .socialEdge {
+     width: 25.1%;
+   }
+   .socialIcon {
+     width: 16.6%;
+   }
+ }
+
+ @media only screen and (max-width: 400px) {
+   .socialEdge {
+     width: 20%;
+   }
+   .socialIcon {
+     width: 20%;
+   }
  }
