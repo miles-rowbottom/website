@@ -251,6 +251,12 @@ html, body {
   max-width: 100%;
 }
 
+@media screen and (max-width: 800px) {
+    .photoBox {
+      background-attachment: scroll;
+    }
+}
+
 @media screen and (max-width: 660px) {
     .topPhoto {
       background-image: url("HomepageImages/MilesPhone.png") !important;
