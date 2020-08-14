@@ -173,7 +173,7 @@
         <h2 style = "margin-left: 20px; margin-right: 20px;">Get in touch! I'd love to chat</h2>
         <p style = "margin-left: 20px; margin-right: 20px;">I prefer to be messaged in my <a class = "linkedinLink" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/">LinkedIn DMs</a>, but use whatever platform that makes you feel most comfortable</p>
       </div>
-      <div class = "socialRow row" style = "display: flex !important; justify-content: center;">
+      <div class = "socialRow row" style = "display: flex !important; justify-content: center; margin-bottom: 10px;">
         <div class = "socialEdge" style = "width: 40.1%;"></div>
         <div class = "socialIcon">
           <button class = "linkedinButton socialButton" onclick="window.open('https://www.linkedin.com/in/miles-rowbottom-128040155/','mywindow');"><i class="fab fa-linkedin"></i></button>
