@@ -18,6 +18,10 @@ html, body {
   display: table;
 }
 
+.header div {
+  border: 1px solid red;
+}
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -49,15 +53,15 @@ html, body {
   color: darkred;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 3000px) {
   .headerLeft {
-    width: 25% !important;
+    width: 25%;
   }
   .headerCenter {
-    width: 50% !important;
+    width: 50%;
   }
   .headerRight {
-    width: 25% !important;
+    width: 25%;
   }
 }
 
@@ -79,12 +83,12 @@ html, body {
   }
   .headerCenter {
     width: 75% !important;
+    justify-content: flex-end !important;
   }
   .headerRight {
-    display: none;
+    display: none !important;
   }
 }
-
 
 .header:hover {
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -113,12 +117,6 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (max-width: 660px) {
-    .headerCenter {
-      justify-content: flex-end !important;
-    }
 }
 
 .navBar {
