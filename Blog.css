@@ -81,7 +81,7 @@ html, body {
     width: 75% !important;
   }
   .headerRight {
-    width: 0% !important;
+    display: none;
   }
 }
 
