@@ -236,7 +236,7 @@ html, body {
 }
 
 .blogHeader {
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -247,10 +247,33 @@ html, body {
   min-height: 90vh;
 }
 
+@media screen and (max-width: 1000px) {
+    .blogHeader {
+      min-height: 75vh;
+      max-height: 75vh;
+    }
+}
+
 @media screen and (max-width: 800px) {
-  .blogHeader {
-    background-attachment: scroll;
-  }
+    .blogHeader {
+      background-attachment: scroll;
+      min-height: 60vh;
+      max-height: 60vh;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .blogHeader {
+      min-height: 50vh;
+      max-height: 50vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blogHeader {
+      min-height: 40vh;
+      max-height: 40vh;
+    }
 }
 
 .blogStripLeft {
