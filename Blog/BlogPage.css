@@ -395,6 +395,20 @@ html, body {
   height: 50vh;
 }
 
+@media screen and (max-width: 660px) {
+    .blogimg {
+      min-height: 40vh;
+      max-height: 40vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blogimg {
+      min-height: 30vh;
+      max-height: 30vh;
+    }
+}
+
 .blogcard {
    background-color: #F4F5F7;
    padding: 1px 20px 5px 20px;
