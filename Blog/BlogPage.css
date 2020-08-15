@@ -392,7 +392,12 @@ html, body {
   background-size: cover;
   width: 100%;
   padding: 20px;
-  height: 50vh;
+}
+
+@media screen and (min-width: 660px) {
+    .blogimg {
+      height: 50vh;
+    }
 }
 
 @media screen and (max-width: 660px) {
@@ -425,14 +430,6 @@ html, body {
 
 .blogcard h5 {
   color: #193342;
-}
-
-.blogimg {
-  width: 100%;
-  padding: 20px;
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
 }
 
 .aboutMeCard {
