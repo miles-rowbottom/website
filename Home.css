@@ -341,7 +341,7 @@ html, body {
 
 @media only screen and (max-width: 750px) {
   .aboutMeText {
-    margin: 5% 5% 5% 5%;
+    margin: 5% 0% 5% 0%;
   }
 }
 
