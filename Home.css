@@ -244,9 +244,8 @@ html, body {
   min-height: 90vh;
   max-width: 100%;
 }
-
 @media screen and (max-width: 1000px) {
-    .topPhoto {
+    .photoBox {
       min-height: 75vh;
       max-height: 75vh;
     }
@@ -255,22 +254,20 @@ html, body {
 @media screen and (max-width: 800px) {
     .photoBox {
       background-attachment: scroll;
-    }
-    .topPhoto {
       min-height: 60vh;
       max-height: 60vh;
     }
 }
 
 @media screen and (max-width: 660px) {
-    .topPhoto {
+    .photoBox {
       min-height: 50vh;
       max-height: 50vh;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .topPhoto {
+    .photoBox {
       min-height: 40vh;
       max-height: 40vh;
     }
