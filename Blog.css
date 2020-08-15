@@ -307,9 +307,26 @@ html, body {
 .blogimg {
   width: 100%;
   padding: 20px;
-  height: 50vh;
   background-size: cover;
   background-position: center;
+}
+
+@media screen and (min-width: 660px) {
+    .blogimg {
+      height: 50vh;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .blogimg {
+      height: 40vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blogimg {
+      height: 30vh;
+    }
 }
 
 .blogcard {
