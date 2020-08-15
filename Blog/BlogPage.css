@@ -478,12 +478,6 @@ html, body {
    cursor: pointer;
  }
 
- @media screen and (max-width: 750px) {
-   .sideimg {
-     height: 50vh;
-   }
- }
-
  .featuredBlogLink {
    color: darkred;
    font-size: 14px;
