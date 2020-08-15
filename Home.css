@@ -339,6 +339,12 @@ html, body {
   padding: 10px;
 }
 
+@media only screen and (max-width: 1100px) {
+  .aboutMeText {
+    margin: 5% 5% 5% 5%;
+  }
+}
+
 .aboutMeText:hover {
   background-color: white;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
