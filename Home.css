@@ -245,16 +245,34 @@ html, body {
   max-width: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+    .topPhoto {
+      min-height: 75vh;
+      max-height: 75vh;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .photoBox {
       background-attachment: scroll;
+    }
+    .topPhoto {
+      min-height: 60vh;
+      max-height: 60vh;
     }
 }
 
 @media screen and (max-width: 660px) {
     .topPhoto {
-      background-image: url("HomepageImages/MilesPhone.png") !important;
-      background-position: center !important;
+      min-height: 50vh;
+      max-height: 50vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .topPhoto {
+      min-height: 40vh;
+      max-height: 40vh;
     }
 }
 
