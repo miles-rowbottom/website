@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href = "clock.css" rel = "stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+  <script>
+  function displayClockFunction() {
+    var clockDisplay = document.getElementById("clock");
+    if (clockDisplay.style.display === 'none') {
+      clockDisplay.style.display = 'flex';
+    } else {
+      clockDisplay.style.display = 'none';
+    }
+
+    var noon = 12;
+
+    var showCurrentTime = function() {
+      var clock = document.getElementById("clock");
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var seconds = currentTime.getSeconds();
+      var meridian = "AM";
+
+      if (hours >= noon) {
+        meridian = "PM";
+      }
+
+      if (hours > noon) {
+        hours = hours - 12;
+      }
+
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+
+      var clockTime = hours + ':' + minutes + ':' + seconds + " " + meridian;
+
+      clock.innerText = clockTime;
+    }
+
+    var updateClock = function() {
+      var time = new Date().getHours()
+      showCurrentTime();
+    };
+
+    updateClock();
+
+    var oneSecond = 1000;
+    setInterval(updateClock, oneSecond);
+  }
+  </script>
+</head>
+<body>
+<div class = "webpage">
+  <div class = "appBox">
+    <div class = "header">
+      <h1 style = "color: white; font-size: 20px;">What's the time?</h1>
+    </div>
+    <div class = "clockCard">
+      <div class = "clockInfo">Click the clock to<br>tick the tock</div>
+      <img src = "clock.svg" class = "clockImage"  onclick = "displayClockFunction()">
+      <span id = "clock">Display clock here</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
