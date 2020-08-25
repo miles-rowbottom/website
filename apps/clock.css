@@ -9,11 +9,43 @@ html, body {
   transition: 0.25s;
 }
 
-.webpage {
-  height: 100%;
+.buttonDiv {
+  width: 100%;
+  height: 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.returnButton {
+  background-color: darkRed;
+  color: white !important;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 18px !important;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.25s;
+}
+
+.returnButton:hover {
+  background-color: white;
+  color: black !important;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.webpage {
+  height: calc(100% - 40px);
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .appBox {
