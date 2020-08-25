@@ -198,12 +198,6 @@ html, body {
   transform: translate(0px, 43px);
 }
 
-@media screen and (max-width: 800px) {
-    .home {
-        display: none !important;
-    }
-}
-
 .headerRight {
   height: 65px;
   display: flex;
@@ -233,6 +227,30 @@ html, body {
   color: black !important;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+.dropdownContent .portfolioDropdown {
+  display: none;
+}
+
+.dropdownContent .portfolioDropdown:hover {
+  background-color: #DB8567;
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .portfolio {
+      display: none !important;
+    }
+    .portfolioDropdown {
+      display: block !important;
+    }
+    .wideText {
+      display: none;
+    }
+    .narrowText {
+      display: contents !important;
+    }
 }
 
 .blogHeader {
