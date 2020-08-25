@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miles' Portfolio</title>
+  <link href = "portfolio.css" rel = "stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+  <script>
+  </script>
+  <style>
+    body { margin:0; }
+    #more {display: none;}
+  </style>
+</head>
+<body>
+  <div class = "webpage">
+    <div class = "row header">
+      <div class = "headerLeft col-3">
+        <img class = "milesLogo" src = "PortfolioImages/MilesLogo.svg" onclick = "window.open('Home', '_self');">
+      </div>
+      <div class = "headerCenter col-6">
+        <ul class = "navBar">
+          <li class="navBarItem dropdown">
+            <a class = "dropdown2" href="#">Blog <i class="fas fa-caret-down"></i></a>
+            <div class="dropdownContent">
+              <a class = "personalDropdown" href="Blog" target = "_blank">Personal</a>
+              <a class = "gyanaDropdown" href="https://www.gyana.com/blog/" target = "_blank">Gyana</a>
+              <a class = "sashaLuciaDropdown" href="https://www.sashalucia.net/myblog" target = "_blank">Sasha Lucia</a>
+            </div>
+          </li>
+          <li class = "home"><a class = "navBarItem" href = "portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class = "headerRight col-3">
+        <a class = "signUpButton" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/" target = "_blank">Get in touch</a>
+      </div>
+    </div>
+    <div class = "appHeader"></div>
+    <div class = "table">
+      <div class = "row">
+        <h1 style = "text-align: center; margin: 30px 10px 0px 10px; color: darkred;">Apps and programs created by me during my learning curve</h1>
+      </div>
+      <div class = "row">
+        <div class = "col-2 emptyCol"></div>
+        <div class = "col-8 contentCol">
+          <div class="appCard" onclick = "window.open('alcohol', '_self');">
+            <h2>Cocktail Ingredients</h2>
+            <h5>Navigate the menu to learn the ingredients that make up 10 of my favourite cocktails</h5>
+            <div class="appimg" style = "background-image: url('PortfolioImages/cocktails.svg');"></div>
+            <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
+          </div>
+          <div class="appCard" onclick = "window.open('clock', '_self');">
+            <h2>JavaScript Clock</h2>
+            <h5>Click on the clock to reveal the time - live and adjusted to wherever you are</h5>
+            <div class="appimg" style = "background-image: url('PortfolioImages/clock.svg');"></div>
+            <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "table">
+      <div class = "socialHeader row">
+        <h2 style = "margin-left: 20px; margin-right: 20px;">Get in touch! I'd love to chat</h2>
+        <p style = "margin-left: 20px; margin-right: 20px;">I prefer to be messaged in my <a class = "linkedinLink" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/">LinkedIn DMs</a>, but use whatever platform that makes you feel most comfortable</p>
+      </div>
+      <div class = "socialRow row" style = "display: flex !important; justify-content: center; margin-bottom: 10px;">
+        <div class = "socialEdge" style = "width: 40.1%;"></div>
+        <div class = "socialIcon">
+          <button class = "linkedinButton socialButton" onclick="window.open('https://www.linkedin.com/in/miles-rowbottom-128040155/','mywindow');"><i class="fab fa-linkedin"></i></button>
+        </div>
+        <div class = "socialIcon">
+          <button class = "socialButton emailButton" onclick="window.open('mailto:miles.rowbottom@gmail.com','mywindow');"><i class="fas fa-envelope-square"></i></button>
+        </div>
+        <div class = "socialIcon">
+          <button class = "socialButton facebookButton" onclick="window.open('https://www.facebook.com/miles64537/','mywindow');"><i class="fab fa-facebook-square"></i></button>
+        </div>
+        <div class = "socialEdge" style = "width: 40.1%;"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
