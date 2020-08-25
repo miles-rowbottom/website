@@ -173,6 +173,10 @@ html, body {
   color: black;
 }
 
+.dropdownContent .portfolioDropdown {
+  display: none;
+}
+
 .dropdownContent .personalDropdown:hover {
   background-color: darkred;
   color: white;
@@ -188,6 +192,11 @@ html, body {
   color: white;
 }
 
+.dropdownContent .portfolioDropdown:hover {
+  background-color: #DB8567;
+  color: white;
+}
+
 .dropdown:hover .dropdownContent {
   display: block;
   transform: translate(0px, 42px);
@@ -198,9 +207,24 @@ html, body {
   transform: translate(0px, 43px);
 }
 
+@media screen and (min-width: 800px) {
+    .narrowText {
+      display: none;
+    }
+}
+
 @media screen and (max-width: 800px) {
-    .home {
-        display: none !important;
+    .portfolio {
+      display: none !important;
+    }
+    .portfolioDropdown {
+      display: block !important;
+    }
+    .wideText {
+      display: none;
+    }
+    .narrowText {
+      display: contents !important;
     }
 }
 
