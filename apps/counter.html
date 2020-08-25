@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href = "counter.css" rel = "stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+  <script>
+    var countValue = 0;
+    function upButton() {
+      countValue += 1;
+      count.innerHTML = countValue;
+    }
+    function downButton() {
+      countValue -= 1;
+      count.innerHTML = countValue;
+    }
+    function up5Button() {
+      countValue += 5;
+      count.innerHTML = countValue;
+    }
+    function down5Button() {
+      countValue -= 5;
+      count.innerHTML = countValue;
+    }
+    function resetButton() {
+      countValue = 0;
+      count.innerHTML = countValue;
+    }
+  </script>
+</head>
+<body>
+  <div class = "buttonDiv">
+    <button class = "returnButton" onclick = "window.open('portfolio', '_self');">Return to app portfolio</button>
+  </div>
+  <div class = "webpage">
+    <div class = "appBox">
+      <div class = "heading">
+        <h1 style = "color: white; font-size: 20px;">My Cool Counter</h1>
+      </div>
+      <div class = "counterBox">
+        <a id = "count">0</a>
+      </div>
+      <div class = "buttons">
+        <button class = "countButton plus1" onClick = "upButton()">+1</button>
+        <button class = "countButton plus5" onClick = "up5Button()">+5</button>
+        <button class = "countButton minus1" onClick = "downButton()">-1</button>
+        <button class = "countButton minus5" onClick = "down5Button()">-5</button>
+        <button class = "countButton reset" onClick = "resetButton()">Reset</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: verdana !important;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+
+.buttonDiv {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.returnButton {
+  background-color: darkRed;
+  color: white !important;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 18px !important;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.25s;
+}
+
+.returnButton:hover {
+  background-color: white;
+  color: black !important;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.webpage {
+  height: calc(100% - 40px);
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.appBox {
+  height: 500px;
+  width: 300px;
+  border: 2px solid black;
+  background-color: #F4F5F7;
+}
+
+.heading {
+  height: 50px;
+  width: 100%;
+  background-color: #DB8567;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counterBox {
+  height: 186px;
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#count {
+  font-size: 80px;
+}
+
+.buttons {
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.countButton {
+  height: 40px;
+  width: 60%;
+  float: left;
+  margin: 5px 20% 5px 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: 0.25s;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.countButton:hover {
+  cursor: pointer;
+  height: 50px;
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  border-radius: 0px;
+  background-color: #F4F5F7;
+  color: black;
+}
+
+.plus1 {
+  background-color: #5E8F65;
+}
+
+.plus1:hover {
+  border-top: 1px solid #5E8F65;
+  border-bottom: 1px solid #5E8F65;
+}
+
+.plus5 {
+  background-color: #0A8F28;
+}
+
+.plus5:hover {
+  border-top: 1px solid #0A8F28;
+  border-bottom: 1px solid #0A8F28;
+}
+
+.minus1 {
+  background-color: #8F5E6B;
+}
+
+.minus1:hover {
+  border-top: 1px solid #8F5E6B;
+  border-bottom: 1px solid #8F5E6B;
+}
+
+.minus5 {
+  background-color: #8F1421;
+}
+
+.minus5:hover {
+  border-top: 1px solid #8F1421;
+  border-bottom: 1px solid #8F1421;
+}
+
+.reset {
+  background-color: #182E8F;
+}
+
+.reset:hover {
+  border-top: 1px solid #182E8F;
+  border-bottom: 1px solid #182E8F;
+}
