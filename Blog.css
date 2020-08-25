@@ -238,6 +238,12 @@ html, body {
   color: white;
 }
 
+@media screen and (min-width: 800px) {
+    .narrowText {
+      display: none;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .portfolio {
       display: none !important;
