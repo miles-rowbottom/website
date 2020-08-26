@@ -8,6 +8,12 @@
   <script src="https://kit.fontawesome.com/a076d05399.js">
   </script>
   <script>
+    function myFunction() {
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("moreButton");
+    moreText.style.display = "block";
+    btnText.style.display = "none";
+  }
   </script>
   <style>
     body { margin:0; }
@@ -58,12 +64,19 @@
             <div class="appimg" style = "background-image: url('PortfolioImages/clock.svg');"></div>
             <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
           </div>
-          <div class="appCard" onclick = "window.open('counter', '_self');">
+          <div class="appCard" onclick = "window.open('calculator', '_self');">
+            <h2>Simple JavaScript Calculator</h2>
+            <h5>Perform basic computations using a clean online calculator</h5>
+            <div class="appimg" style = "background-image: url('PortfolioImages/calculator.svg');"></div>
+            <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
+          </div>
+          <div class="appCard" id = "more" onclick = "window.open('counter', '_self');">
             <h2>JavaScript Counter</h2>
             <h5>Keep track of the number of attendees at an event while admiring the beautiful CSS buttons</h5>
             <div class="appimg" style = "background-image: url('PortfolioImages/counter.svg');"></div>
             <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
           </div>
+          <button onclick="myFunction()" id="moreButton">Click to load more</button>
         </div>
       </div>
     </div>
