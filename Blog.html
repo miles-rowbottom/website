@@ -10,14 +10,17 @@
   <script>
   function myFunction() {
     var moreText = document.getElementById("more");
+    var moreText1 = document.getElementById("more1");
     var btnText = document.getElementById("moreButton");
     moreText.style.display = "block";
+    moreText1.style.display = "block";
     btnText.style.display = "none";
   }
   </script>
   <style>
     body { margin:0; }
     #more {display: none;}
+    #more1 {display: none;}
   </style>
 </head>
 <body>
@@ -48,6 +51,12 @@
     <div class = "table">
       <div class = "row">
         <div class = "col-8">
+          <div class="blogcard" onclick = "window.open('Blog/TheBeginningsOfMyPublicPortfolio', '_self');">
+            <h2>The Beginnings of my Public Portfolio</h2>
+            <h5>4 minute read, August 26th 2020</h5>
+            <div class="blogimg" style = "background-image: url('BlogImages/August26BlogImage.svg');"></div>
+            <p><span style = "font-weight: bold;">It feels like it’s been a while since my last update, and since then I’ve introduced a lot of new features</span>. I’ve had some time to reflect on what I’ve completed thus far, and what needed to be added.</p>
+          </div>
           <div class="blogcard" onclick = "window.open('Blog/MyStrugglesWithResponsiveWebDesign', '_self');">
             <h2>My Struggles with Responsive Web Design</h2>
             <h5>5 minute read, August 18th 2020</h5>
@@ -60,13 +69,13 @@
             <div class="blogimg" style = "background-image: url('BlogImages/August13BlogImage.svg');"></div>
             <p><span style = "font-weight: bold;">Here I am</span>. A fully functioning, well-designed website available for the world to site. Created by me. It’s a feeling that’s hard to describe, but I’ll do my best to.</p>
           </div>
-          <div class="blogcard" onclick = "window.open('Blog/DecidingToBuildAWebsite', '_self');">
+          <div class="blogcard" id = "more" onclick = "window.open('Blog/DecidingToBuildAWebsite', '_self');">
             <h2>Deciding to Build a Website</h2>
             <h5>6 minute read, 9th August 2020</h5>
             <div class="blogimg" style = "background-image: url('BlogImages/August9BlogImage.svg');"></div>
             <p><span style = "font-weight: bold;">I have never had so much fun doing something so technical and challenging </span>. I have had to build not only this website but my entire knowledge of web development from the ground up, and I’ve loved it.</p>
           </div>
-          <div class="blogcard" id = "more" onclick = "window.open('Blog/WhyIStartedToLearnWebDevelopment', '_self');">
+          <div class="blogcard" id = "more1" onclick = "window.open('Blog/WhyIStartedToLearnWebDevelopment', '_self');">
             <h2>Why I Started to Learn Web Development</h2>
             <h5>5 minute read, August 6th 2020</h5>
             <div class="blogimg" style = "background-image: url('BlogImages/August6BlogImage.svg');"></div>
