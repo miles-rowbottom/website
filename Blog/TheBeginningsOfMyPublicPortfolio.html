@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I Started to Learn Web Development</title>
+  <link href = "BlogPage.css" rel = "stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+  <style>
+    body { margin:0; }
+  </style>
+</head>
+<body>
+  <div class = "webpage">
+    <div class = "row header">
+      <div class = "headerLeft col-3">
+        <img class = "milesLogo" src = "BlogImages/MilesLogo.svg" onclick = "window.open('/Home', '_self');">
+      </div>
+      <div class = "headerCenter col-6">
+        <ul class = "navBar">
+          <li class="navBarItem dropdown">
+            <a class = "dropdown2" href="#"><span class = "wideText">Blog </span><span class = "narrowText">Content </span><i class="fas fa-caret-down"></i></a>
+            <div class="dropdownContent">
+              <a class = "personalDropdown" href="/Blog" target = "_blank">Personal</a>
+              <a class = "gyanaDropdown" href="https://www.gyana.com/blog/" target = "_blank">Gyana</a>
+              <a class = "sashaLuciaDropdown" href="https://www.sashalucia.net/myblog" target = "_blank">Sasha Lucia</a>
+              <a class = "portfolioDropdown" href="/apps/portfolio" target = "_blank">Portfolio</a>
+            </div>
+          </li>
+          <li class = "portfolio"><a class = "navBarItem" href = "/apps/portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class = "headerRight col-3">
+        <a class = "signUpButton" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/" target = "_blank">Get in touch</a>
+      </div>
+    </div>
+    <div class = "blogHeader" style = "background-image: url('BlogImages/August26BlogImage.svg');"></div>
+    <div class = "table">
+      <div class = "row">
+        <div class = "col-4">
+          <a class = "backToBlogButton" href = "/Blog">Back to homepage</a>
+        </div>
+        <div class = "col-8">
+          <a class = "shareButton facebook" href="http://www.facebook.com/sharer.php?u=milesrowbottom.com/Blog/TheBeginningsOfMyPublicPortfolio" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class = "shareButton twitter" href="https://twitter.com/share?url=milesrowbottom.com/Blog/TheBeginningsOfMyPublicPortfolio&amp;text=Great%20Blog%20Article&amp;hashtags=blog" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a class = "shareButton linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=milesrowbottom.com/Blog/TheBeginningsOfMyPublicPortfolio" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a class = "shareButton email" href="mailto:?Subject=Great Blog Post&amp;Body=I%20saw%20this%20great%20blog%20post%20and%20thought%20you'd%20enjoy%20it!%20 https://milesrowbottom.com/Blog/TheBeginningsOfMyPublicPortfolio"><i class="far fa-envelope"></i></a>
+        </div>
+        <div class = "col-8">
+          <div class="blogcard">
+            <h1 style = "color: darkred;">The Beginnings of my Public Portfolio</h1>
+            <h5>Web development, August 26th 2020</h5>
+            <div class="blogimg" style = "background-image: url('BlogImages/August26BlogImage.svg');"></div>
+            <h4 style = "font-style: italic;">It feels like it’s been a while since my last update, and since then I’ve introduced a lot of new features. I’ve had some time to reflect on what I’ve completed thus far, and what needed to be added.</h4>
+            <p>But first, I want to take a moment to introduce another project I completed in this time. I stated in the last blog that I’d like to create something with <span style = "font-style: italic;">utility</span>. I’ve done just that.</p>
+            <p>I have designed and implemented a directory of pages that have replaced the ‘new tab’ page that browsers present when opening a new tab/window. I was tired of this page being both dull and impersonal – it provided nothing for me.</p>
+            <p>Instead, I now have a functional layout that directs me to different categories important for my productivity, and then provides catalogues of useful sites related to the category. I have of course made this responsive and it is my default page on my phone as well. It speeds up my processes, from programming to online shopping, as all the links I may need are always immediately available.</p>
+            <p>These pages remain hidden from my site though, meaning I am more excited to present the new feature public to all – <span style = "font-style: italic;">a portfolio</span>.</p>
+            <p>I have been dabbling in the creation of little apps and programs for a short while, and decided they are best shared with everyone. I share everything on my blog, so why not have these programs free for everyone to use? Don’t get me wrong, at this point in time these apps are far from astounding, but they provide a timeline of my progress through different programming languages.</p>
+            <p>Most importantly, this feature is expanding my knowledge of JavaScript. I have implemented little ‘show more’ buttons to keep my portfolio and blog homepages concise whilst flexing that little bit of extra JavaScript functionality.</p>
+            <p>The apps themselves thus far focus around the use of JavaScript – a clock, counter and calculator for practising the use of calculation functions and a cocktail manual for the hiding and displaying of elements. Sure, they are simple, but they have functionality and that’s what makes me proud. If anything, they are a yardstick that reminds me how far I have come and act as motivation to push on.</p>
+            <p>The plan is for future projects to incorporate PHP and server-side functionality – but I will not rush and risk confusing myself. <span style = "font-weight: bold;">Learning web development is a marathon, not a sprint</span>.</p>
+          </div>
+        </div>
+        <div class = "col-4">
+          <div class="aboutMeCard">
+            <h3 style = "color: darkred">Author</h3>
+            <h4 style = "color: #193342;">Miles Rowbottom</h4>
+            <p><a class = "authorLink" style = "color: darkred !important; text-decoration: none;" href = "/Home">Click</a> to find out more about me and my work.</p>
+          </div>
+          <div class="moreBlogsCard">
+            <h3 style = "color: darkred">My Popular Posts</h3>
+            <div class="sideimg featured1" onclick = "window.open('WhyIStartedToLearnWebDevelopment', '_self');" style = "background-image: url('BlogImages/August6BlogImage.svg');"></div><br>
+            <a class = "featuredBlogLink" href = "WhyIStartedToLearnWebDevelopment">Why I Started to Learn Web Development</a><br><br>
+            <div class="sideimg featured2" onclick = "window.open('FirstVersionOfMyWebsite', '_self');" style = "background-image: url('BlogImages/August13BlogImage.svg');"></div><br>
+            <a class = "featuredBlogLink" href = "FirstVersionOfMyWebsite">First Version of my Website? Completed it mate.</a><br><br>
+            <div class="sideimg featured3" onclick = "window.open('DecidingToBuildAWebsite', '_self');" style = "background-image: url('BlogImages/August9BlogImage.svg');"></div><br>
+            <a class = "featuredBlogLink" href = "DecidingToBuildAWebsite">Deciding to Build a Website</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "table">
+      <div class = "socialHeader row">
+        <h2 style = "margin-left: 20px; margin-right: 20px;">Get in touch! I'd love to chat</h2>
+        <p style = "margin-left: 20px; margin-right: 20px;">I prefer to be messaged in my <a class = "linkedinLink" href = "https://www.linkedin.com/in/miles-rowbottom-128040155/">LinkedIn DMs</a>, but use whatever platform that makes you feel most comfortable</p>
+      </div>
+      <div class = "socialRow row" style = "display: flex !important; justify-content: center; margin-bottom: 10px;">
+        <div class = "socialEdge" style = "width: 40.1%;"></div>
+        <div class = "socialIcon">
+          <button class = "linkedinButton socialButton" onclick="window.open('https://www.linkedin.com/in/miles-rowbottom-128040155/','mywindow');"><i class="fab fa-linkedin"></i></button>
+        </div>
+        <div class = "socialIcon">
+          <button class = "socialButton emailButton" onclick="window.open('mailto:miles.rowbottom@gmail.com','mywindow');"><i class="fas fa-envelope-square"></i></button>
+        </div>
+        <div class = "socialIcon">
+          <button class = "socialButton facebookButton" onclick="window.open('https://www.facebook.com/miles64537/','mywindow');"><i class="fab fa-facebook-square"></i></button>
+        </div>
+        <div class = "socialEdge" style = "width: 40.1%;"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
