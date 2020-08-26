@@ -387,6 +387,31 @@ html, body {
   color: darkred;
 }
 
+#moreButton {
+  background-color: darkRed;
+  color: white !important;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 18px !important;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+  transition: 0.25s;
+  margin-top: 20px;
+}
+
+#moreButton:hover {
+  background-color: white;
+  color: black !important;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
  .socialIcon {
    float: left;
    display: flex;
