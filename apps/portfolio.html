@@ -12,10 +12,12 @@
     var moreText = document.getElementById("more");
     var moreText1 = document.getElementById("more1");
     var moreText2 = document.getElementById("more2");
+    var moreText3 = document.getElementById("more3");
     var btnText = document.getElementById("moreButton");
     moreText.style.display = "block";
     moreText1.style.display = "block";
     moreText2.style.display = "block";
+    moreText3.style.display = "block";
     btnText.style.display = "none";
   }
   </script>
@@ -24,6 +26,7 @@
     #more {display: none;}
     #more1 {display: none;}
     #more2 {display: none;}
+    #more3 {display: none;}
   </style>
 </head>
 <body>
@@ -82,19 +85,25 @@
             <div class="appimg" style = "background-image: url('PortfolioImages/clock.svg');"></div>
             <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
           </div>
-          <div class="appCard" id = "more" onclick = "window.open('calculator', '_self');">
+          <div class="appCard" id = "more" onclick = "window.open('loading', '_self');">
+            <h2>JavaScript Loading Bars</h2>
+            <h5>Click the buttons to watch the loading bars approach completion in a variety of styles</h5>
+            <div class="appimg" style = "background-image: url('PortfolioImages/loading.svg');"></div>
+            <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
+          </div>
+          <div class="appCard" id = "more1" onclick = "window.open('calculator', '_self');">
             <h2>Simple JavaScript Calculator</h2>
             <h5>Perform basic computations using a clean online calculator</h5>
             <div class="appimg" style = "background-image: url('PortfolioImages/calculator.svg');"></div>
             <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
           </div>
-          <div class="appCard" id = "more1" onclick = "window.open('tax', '_self');">
+          <div class="appCard" id = "more2" onclick = "window.open('tax', '_self');">
             <h2>JavaScript Tax Calculator</h2>
             <h5>Enter your annual income to be presented with a simplified calculation of the income tax you will pay</h5>
             <div class="appimg" style = "background-image: url('PortfolioImages/tax.svg');"></div>
             <p><span style = "font-weight: bold">Languages used:</span><br>HTML, CSS, JavaScript</p>
           </div>
-          <div class="appCard" id = "more2" onclick = "window.open('counter', '_self');">
+          <div class="appCard" id = "more3" onclick = "window.open('counter', '_self');">
             <h2>JavaScript Counter</h2>
             <h5>Keep track of the number of attendees at an event while admiring the beautiful CSS buttons</h5>
             <div class="appimg" style = "background-image: url('PortfolioImages/counter.svg');"></div>
