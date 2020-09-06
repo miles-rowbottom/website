@@ -1,0 +1,188 @@
+tml, body {
+  height: 100%;
+  margin: 0;
+  font-family: verdana, sans-serif !important;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.15s;
+}
+
+.webpage {
+  width: calc(100% - 80px);
+  margin: 20px 40px 20px 40px;
+}
+
+.buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  float: left;
+}
+
+.returnButton {
+  background-color: darkRed;
+  color: white !important;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 18px !important;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.25s;
+}
+
+.returnButton:hover {
+  background-color: white;
+  color: black !important;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.headingBox {
+  width: 100%;
+  float: left;
+}
+
+.gameBox {
+  background-color: #F4F5F7;
+  width: 100%;
+  float: left;
+  padding: 0px 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+#scoreBox {
+  display: none;
+  margin-bottom: 20px;
+  background-color: #F4F5F7;
+  width: 100%;
+  float: left;
+  padding: 0px 20px 0px 20px;
+}
+
+.gameText {
+  font-family: verdana, sans-serif;
+}
+
+.gameButton {
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: #65BA98;
+  padding: 10px 20px 10px 20px;
+}
+
+.gameButton:hover {
+  background-color: #509479;
+  cursor: pointer;
+}
+
+.questionButton {
+  margin-top: 20px;
+}
+
+#question1Box {
+  display: none;
+}
+
+#question2Box {
+  display: none;
+}
+
+#question3Box {
+  display: none;
+}
+
+#question4Box {
+  display: none;
+}
+
+#question5Box {
+  display: none;
+}
+
+#resultBox {
+  display: none;
+}
+
+.inputBox {
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  color: black;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+}
+
+.correctBox {
+  display: none;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: #65BA98;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+}
+
+.wrongBox {
+  display: none;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: darkred;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+}
+
+.emptyBox {
+  display: none;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: darkred;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+}
+
+.restartButton {
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: #65BA98;
+  padding: 10px 20px 10px 20px;
+}
+
+.restartButton:hover {
+  background-color: #509479;
+  cursor: pointer;
+}
