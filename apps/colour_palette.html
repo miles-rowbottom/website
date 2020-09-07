@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href = "colour_palette.css" rel = "stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+  <script>
+  var redValue = "";
+  var greenvalue = "";
+  var blueValue = "";
+
+  var updateLoop = setInterval(go, 1);
+
+  go();
+
+  function go() {
+    document.getElementById("colour0").style.backgroundColor = "hsl(" + document.getElementById("hueRange").value + ", " + document.getElementById("saturationRange").value + "%, " + document.getElementById("lightnessRange").value + "%)";
+    document.getElementById("hueValue").innerHTML = "Hue: " + document.getElementById("hueRange").value;
+    document.getElementById("saturationValue").innerHTML = "Saturation: " + document.getElementById("saturationRange").value;
+    document.getElementById("lightnessValue").innerHTML = "Lightness: " + document.getElementById("lightnessRange").value;
+  }
+
+  function complementaryFunction() {
+    hueValue = document.getElementById("hueRange").value;
+    if (hueValue < 180) {
+      var compHueValue = eval(hueValue - (-180));
+    } else {
+      var compHueValue = eval(hueValue - 180);
+    }
+    saturationValue = document.getElementById("saturationRange").value;
+    lightnessValue = document.getElementById("lightnessRange").value;
+    document.getElementById("colourBox1").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox2").style.backgroundColor = "hsl(" + compHueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.display = "none";
+    document.getElementById("colourBox4").style.display = "none";
+    document.getElementById("colour1").innerHTML = "Colour 1: HSL (" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour2").innerHTML = "Colour 2: HSL (" + compHueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").style.display = "none";
+    document.getElementById("colour4").style.display = "none";
+    document.getElementById("resultBox").style.display = "block";
+  }
+
+  function triadicFunction() {
+    hueValue = document.getElementById("hueRange").value;
+    if (hueValue < 120) {
+      var hueValue1 = eval(hueValue - (-240));
+      var hueValue2 = eval(hueValue - (-120));
+    } else if (hueValue < 240) {
+      var hueValue1 = eval(hueValue - 120);
+      var hueValue2 = eval(hueValue - (-120));
+    } else {
+      var hueValue1 = eval(hueValue - 240);
+      var hueValue2 = eval(hueValue - 120);
+    }
+    saturationValue = document.getElementById("saturationRange").value;
+    lightnessValue = document.getElementById("lightnessRange").value;
+    document.getElementById("colourBox1").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox2").style.backgroundColor = "hsl(" + hueValue1 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.backgroundColor = "hsl(" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.display = "block";
+    document.getElementById("colourBox4").style.display = "none";
+    document.getElementById("colour1").innerHTML = "Colour 1: HSL (" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour2").innerHTML = "Colour 2: HSL (" + hueValue1 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").innerHTML = "Colour 3: HSL (" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").style.display = "block";
+    document.getElementById("colour4").style.display = "none";
+    document.getElementById("resultBox").style.display = "block";
+  }
+
+  function analogousFunction() {
+    hueValue = document.getElementById("hueRange").value;
+    if (hueValue < 30) {
+      var hueValue1 = eval(hueValue - (-330));
+      var hueValue2 = eval(hueValue - (-30));
+    } else if (hueValue < 330) {
+      var hueValue1 = eval(hueValue - 30);
+      var hueValue2 = eval(hueValue - (-30));
+    } else {
+      var hueValue1 = eval(hueValue - 30);
+      var hueValue2 = eval(hueValue - 330);
+    }
+    saturationValue = document.getElementById("saturationRange").value;
+    lightnessValue = document.getElementById("lightnessRange").value;
+    document.getElementById("colourBox1").style.backgroundColor = "hsl(" + hueValue1 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox2").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.backgroundColor = "hsl(" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.display = "block";
+    document.getElementById("colourBox4").style.display = "none";
+    document.getElementById("colour1").innerHTML = "Colour 1: HSL (" + hueValue1 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour2").innerHTML = "Colour 2: HSL (" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").innerHTML = "Colour 3: HSL (" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").style.display = "block";
+    document.getElementById("colour4").style.display = "none";
+    document.getElementById("resultBox").style.display = "block";
+  }
+
+  function tetradicFunction() {
+    hueValue = document.getElementById("hueRange").value;
+    if (hueValue < 120) {
+      var hueValue1 = eval(hueValue - (-60));
+      var hueValue2 = eval(hueValue - (-180));
+      var hueValue3 = eval(hueValue - (-240));
+    } else if (hueValue < 180) {
+      var hueValue1 = eval(hueValue - (-60));
+      var hueValue2 = eval(hueValue - (-180));
+      var hueValue3 = eval(hueValue - 120);
+    } else if (hueValue < 300) {
+        var hueValue1 = eval(hueValue - (-60));
+        var hueValue2 = eval(hueValue - 180);
+        var hueValue3 = eval(hueValue - 120);
+    } else {
+      var hueValue1 = eval(hueValue - 300);
+      var hueValue2 = eval(hueValue - 180);
+      var hueValue3 = eval(hueValue - 120);
+    }
+    saturationValue = document.getElementById("saturationRange").value;
+    lightnessValue = document.getElementById("lightnessRange").value;
+    document.getElementById("colourBox1").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox2").style.backgroundColor = "hsl(" + hueValue1 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.backgroundColor = "hsl(" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox4").style.backgroundColor = "hsl(" + hueValue3 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.display = "block";
+    document.getElementById("colourBox4").style.display = "block";
+    document.getElementById("colour1").innerHTML = "Colour 1: HSL (" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour2").innerHTML = "Colour 2: HSL (" + hueValue1 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").innerHTML = "Colour 3: HSL (" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour4").innerHTML = "Colour 4: HSL (" + hueValue3 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").style.display = "block";
+    document.getElementById("colour4").style.display = "block";
+    document.getElementById("resultBox").style.display = "block";
+  }
+
+  function squareFunction() {
+    hueValue = document.getElementById("hueRange").value;
+    if (hueValue < 90) {
+      var hueValue1 = eval(hueValue - (-270));
+      var hueValue2 = eval(hueValue - (-180));
+      var hueValue3 = eval(hueValue - (-90));
+    } else if (hueValue < 180) {
+      var hueValue1 = eval(hueValue - 90);
+      var hueValue2 = eval(hueValue - (-90));
+      var hueValue3 = eval(hueValue - (-180));
+    } else if (hueValue < 270) {
+        var hueValue1 = eval(hueValue - 180);
+        var hueValue2 = eval(hueValue - 90);
+        var hueValue3 = eval(hueValue - (-90));
+    } else {
+      var hueValue1 = eval(hueValue - 270);
+      var hueValue2 = eval(hueValue - 180);
+      var hueValue3 = eval(hueValue - 90);
+    }
+    saturationValue = document.getElementById("saturationRange").value;
+    lightnessValue = document.getElementById("lightnessRange").value;
+    document.getElementById("colourBox1").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox2").style.backgroundColor = "hsl(" + hueValue1 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.backgroundColor = "hsl(" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox4").style.backgroundColor = "hsl(" + hueValue3 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colourBox3").style.display = "block";
+    document.getElementById("colourBox4").style.display = "block";
+    document.getElementById("colour1").innerHTML = "Colour 1: HSL (" + hueValue + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour2").innerHTML = "Colour 2: HSL (" + hueValue1 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").innerHTML = "Colour 3: HSL (" + hueValue2 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour4").innerHTML = "Colour 4: HSL (" + hueValue3 + ", " + saturationValue + "%, " + lightnessValue + "%)";
+    document.getElementById("colour3").style.display = "block";
+    document.getElementById("colour4").style.display = "block";
+    document.getElementById("resultBox").style.display = "block";
+  }
+
+  function monochromeFunction() {
+    hueValue = document.getElementById("hueRange").value;
+    saturationValue = document.getElementById("saturationRange").value;
+    lightnessValue = document.getElementById("lightnessRange").value;
+    if (lightnessValue < 26) {
+      var lightnessValue1 = lightnessValue;
+      var lightnessValue2 = eval(lightnessValue - (-25));
+      var lightnessValue3 = eval(lightnessValue - (-50));
+      var lightnessValue4 = eval(lightnessValue - (-75));
+    } else if (lightnessValue < 51) {
+      var lightnessValue1 = eval(lightnessValue - 25);
+      var lightnessValue2 = lightnessValue;
+      var lightnessValue3 = eval(lightnessValue - (-25));
+      var lightnessValue4 = eval(lightnessValue - (-50));
+    } else if (lightnessValue < 76) {
+      var lightnessValue1 = eval(lightnessValue - 50);
+      var lightnessValue2 = eval(lightnessValue - 25);
+      var lightnessValue3 = lightnessValue;
+      var lightnessValue4 = eval(lightnessValue - (-25));
+    } else {
+      var lightnessValue1 = eval(lightnessValue - 75);
+      var lightnessValue2 = eval(lightnessValue - 50);
+      var lightnessValue3 = eval(lightnessValue - 25);
+      var lightnessValue4 = lightnessValue;
+    }
+    document.getElementById("colourBox1").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue1 + "%)";
+    document.getElementById("colourBox2").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue2 + "%)";
+    document.getElementById("colourBox3").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue3 + "%)";
+    document.getElementById("colourBox4").style.backgroundColor = "hsl(" + hueValue + ", " + saturationValue + "%, " + lightnessValue4 + "%)";
+    document.getElementById("colourBox3").style.display = "block";
+    document.getElementById("colourBox4").style.display = "block";
+    document.getElementById("colour1").innerHTML = "Colour 1: HSL (" + hueValue + ", " + saturationValue + "%, " + lightnessValue1 + "%)";
+    document.getElementById("colour2").innerHTML = "Colour 2: HSL (" + hueValue + ", " + saturationValue + "%, " + lightnessValue2 + "%)";
+    document.getElementById("colour3").innerHTML = "Colour 3: HSL (" + hueValue + ", " + saturationValue + "%, " + lightnessValue3 + "%)";
+    document.getElementById("colour4").innerHTML = "Colour 4: HSL (" + hueValue + ", " + saturationValue + "%, " + lightnessValue4 + "%)";
+    document.getElementById("colour3").style.display = "block";
+    document.getElementById("colour4").style.display = "block";
+    document.getElementById("resultBox").style.display = "block";
+  }
+  </script>
+</head>
+<body>
+<div class = "webpage">
+  <div class = "buttonDiv">
+    <button class = "returnButton" onclick = "window.open('portfolio', '_self');">Return to app portfolio</button>
+  </div>
+  <div class = "headingBox">
+    <h1 class = "heading">RGB Colour Palette Calculator</h1>
+  </div>
+  <div class = "gameBox">
+    <h2>Instructions</h2>
+    <p>Use the sliders to select the Hue, Saturation and Lightness values for your desired colour and hit then select a palette theme to see the corresponding colour combination, perfect for creating your next colour palette!</p>
+    <h4 style = "text-align: center;" id = "hueValue"></h4>
+    <div class = "submitBox">
+      <input type = "range" min = "0" max = "360" value = "0" class = "slider" id = "hueRange">
+    </div>
+    <h4 style = "text-align: center;" id = "saturationValue"></h4>
+    <div class = "submitBox">
+      <input type = "range" min = "0" max = "100" value = "100" class = "slider" id = "saturationRange">
+    </div>
+    <h4 style = "text-align: center;" id = "lightnessValue"></h4>
+    <div class = "submitBox">
+      <input type = "range" min = "0" max = "100" value = "50" class = "slider" id = "lightnessRange">
+    </div>
+    <h3 style = "text-align: center;">Your current selection</h3>
+    <div class = "outputBox"><div class = "colourBox" id = "colour0"></div></div>
+    <div class = "buttonBox"><input type = "button" class = "submitButton" id = "complementaryButton" value = "Complementary" onclick = "complementaryFunction()"/></div>
+    <div class = "buttonBox"><input type = "button" class = "submitButton" id = "triadicButton" value = "Triadic" onclick = "triadicFunction()"/></div>
+    <div class = "buttonBox"><input type = "button" class = "submitButton" id = "analogousButton" value = "Analogous" onclick = "analogousFunction()"/></div>
+    <div class = "buttonBox"><input type = "button" class = "submitButton" id = "tetradicButton" value = "Tetradic" onclick = "tetradicFunction()"/></div>
+    <div class = "buttonBox"><input type = "button" class = "submitButton" id = "squareButton" value = "Square" onclick = "squareFunction()"/></div>
+    <div class = "buttonBox"><input type = "button" class = "submitButton" id = "monochromeButton" value = "Monochromatic" onclick = "monochromeFunction()"/></div>
+  </div>
+  <div class = "gameBox" id = "resultBox">
+    <h2>Your colour palette!</h2>
+    <div class = "outputBox">
+      <div class = "colourBox" id = "colourBox1"></div>
+      <div class = "colourBox" id = "colourBox2"></div>
+      <div class = "colourBox" id = "colourBox3"></div>
+      <div class = "colourBox" id = "colourBox4"></div>
+    </div>
+    <div class = "submitBox"><p id = "colour1"></p></div>
+    <div class = "submitBox"><p id = "colour2"></p></div>
+    <div class = "submitBox"><p id = "colour3"></p></div>
+    <div class = "submitBox"><p id = "colour4"></p></div>
+  </div>
+  <div class = "whiteStrip"></div>
+</div>
+</body>
+</html>

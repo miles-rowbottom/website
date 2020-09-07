@@ -1,0 +1,199 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: verdana, sans-serif !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.webpage {
+  width: calc(100% - 80px);
+  margin: 20px 40px 20px 40px;
+}
+
+.buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  float: left;
+}
+
+.returnButton {
+  background-color: darkRed;
+  color: white !important;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 18px !important;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.25s;
+}
+
+.returnButton:hover {
+  background-color: white;
+  color: black !important;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.headingBox {
+  width: 100%;
+  float: left;
+}
+
+.gameBox {
+  background-color: #F4F5F7;
+  width: 100%;
+  float: left;
+  padding: 0px 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 300px;
+  height: 25px;
+  background: white;
+  border: 1px solid black;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  cursor: pointer;
+  border: 1px solid black;
+  background: none;
+}
+
+#lightnessRange::-webkit-slider-thumb {
+  background: darkred !important;
+}
+
+#hueRange {
+  background-image: linear-gradient(to right, red, orange, yellow, #7fff00, lime, springgreen, aqua, #007fff, blue, #7f00ff, fuchsia, #ff007f, red);
+}
+
+#saturationRange {
+  background-image: linear-gradient(to right, #808080, red);
+}
+
+#lightnessRange {
+  background-image: linear-gradient(to right, black, white);
+}
+
+.submitBox {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#colour0 {
+  display: block;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.buttonBox {
+  float: left;
+  width: calc(100% / 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .buttonBox {
+      width: calc(100% / 3);
+    }
+    #complementaryButton {
+      margin-bottom: 20px;
+    }
+    #triadicButton {
+      margin-bottom: 20px;
+    }
+    #analogousButton {
+      margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .buttonBox {
+    width: 100%;
+  }
+  #tetradicButton {
+    margin-bottom: 20px;
+  }
+  #squareButton {
+    margin-bottom: 20px;
+  }
+}
+
+.submitButton {
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: #65BA98;
+  padding: 10px 20px 10px 20px;
+}
+
+.submitButton:hover {
+  background-color: #509479;
+  cursor: pointer;
+}
+
+#resultBox {
+  display: none;
+}
+
+.outputBox {
+  float: left;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colourBox {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width: 660px) {
+    .colourBox {
+      width: 75px;
+      height: 75px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .colourBox {
+      width: 60px;
+      height: 60px;
+    }
+}
+
+.whiteStrip {
+  width: 100%;
+  height: 0.1px;
+  float: left;
+}
