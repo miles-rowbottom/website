@@ -1,0 +1,115 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: verdana, sans-serif !important;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.15s;
+}
+
+.webpage {
+  width: calc(100% - 80px);
+  margin: 20px 40px 20px 40px;
+}
+
+.buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  float: left;
+}
+
+.returnButton {
+  background-color: darkRed;
+  color: white !important;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 18px !important;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.25s;
+}
+
+.returnButton:hover {
+  background-color: white;
+  color: black !important;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.headingBox {
+  width: 100%;
+  float: left;
+}
+
+#gameBox {
+  background-color: #F4F5F7;
+  width: 100%;
+  float: left;
+  padding: 0px 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+.gameText {
+  font-family: verdana, sans-serif;
+}
+
+.buttonBox {
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameButton {
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: #65BA98;
+  padding: 10px 20px 10px 20px;
+}
+
+.gameButton:hover {
+  background-color: #509479;
+  cursor: pointer;
+}
+
+#burgerBox {
+  background-color: #F4F5F7;
+  width: 100%;
+  float: left;
+  padding: 0px 20px 10px 20px;
+  display: none;
+}
+
+.burger {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.burger p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.whiteBar {
+  width: 100%;
+  float: left;
+  background-color: white;
+  height: 20px;
+}
