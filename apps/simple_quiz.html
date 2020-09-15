@@ -32,6 +32,7 @@
     document.getElementById("correctAnswers").innerHTML = correctAnswers;
     document.getElementById("totalQuestions").innerHTML = totalQuestions;
     document.getElementById("next1Button").style.display = "block";
+    document.getElementById("progress").style.width = "20%";
   }
 
   function next1Function() {
@@ -51,6 +52,7 @@
     document.getElementById("correctAnswers").innerHTML = correctAnswers;
     document.getElementById("totalQuestions").innerHTML = totalQuestions;
     document.getElementById("next2Button").style.display = "block";
+    document.getElementById("progress").style.width = "40%";
   }
 
   function next2Function() {
@@ -74,6 +76,7 @@
       document.getElementById("correctAnswers").innerHTML = correctAnswers;
       document.getElementById("totalQuestions").innerHTML = totalQuestions;
       document.getElementById("next3Button").style.display = "block";
+      document.getElementById("progress").style.width = "60%";
     }
   }
 
@@ -94,6 +97,7 @@
     document.getElementById("correctAnswers").innerHTML = correctAnswers;
     document.getElementById("totalQuestions").innerHTML = totalQuestions;
     document.getElementById("next4Button").style.display = "block";
+    document.getElementById("progress").style.width = "80%";
   }
 
   function next4Function() {
@@ -113,6 +117,7 @@
     document.getElementById("correctAnswers").innerHTML = correctAnswers;
     document.getElementById("totalQuestions").innerHTML = totalQuestions;
     document.getElementById("next5Button").style.display = "block";
+    document.getElementById("progress").style.width = "100%";
   }
 
   function next5Function() {
@@ -208,6 +213,12 @@
     </div>
   </div>
   <div id = "scoreBox">
+    <div class = "progressLabel">
+      <h4 class = "score">Progress: </h4>
+    </div>
+    <div class = "progressBox">
+      <div class = "progressBar"><div id = "progress"></div></div>
+    </div>
     <h4 class = "score">Current Score: <span id = "correctAnswers"></span> / <span id = "totalQuestions"></span></h4>
   </div>
 </div>
