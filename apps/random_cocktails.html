@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href = "random_cocktails.css" rel = "stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js">
+  </script>
+  <script>
+  var box1Value = "off";
+  var box2Value = "off";
+  var box3Value = "off";
+  var box4Value = "off";
+  var box5Value = "off";
+  var box6Value = "off";
+  var box7Value = "off";
+  var box8Value = "off";
+  var box9Value = "off";
+  var box10Value = "off";
+  var box11Value = "off";
+  var box12Value = "off";
+
+  var spirits = ["Vodka", "White Rum", "Spiced Rum", "Dark Rum", "Tequila", "White Tequila", "Gin", "Whisky", "Jack Daniels", "Scotch", "Cognac", "Absinthe", "Brandy"];
+  var liqueurs = ["Baileys", "Malibu", "Cointreau", "Pimms", "Blue Curacao", "Drambuie", "Disaronno", "Southern Comfort", "Triple Sec", "Kahlua", "Aperol", "Unicum", "Sambuca", "Jagermeister", "Limoncello", "Campari", "Amaretto", "Chartreuse"];
+  var fruitSyrups = ["Strawberry Syrup", "Raspberry Syrup", "Orange Syrup", "Lime Syrup", "Lemon Syrup", "Black Cherry Syrup", "Banana Syrup", "Peach Syrup", "Passionfruit Syrup", "Apple Syrup", "Blackcurrent Syrup", "Pear Syrup", "Grape Syrup", "Kiwi Syrup", "Mango Syrup", "Pineapple Syrup"];
+  var otherSyrups = ["Coffee Syrup", "Almond Syrup", "Coconut Syrup", "Chocolate Syrup", "Mint Syrup", "Ginger Syrup", "Grenadine", "Hazelnut Syrup", "Pistachio Syrup", "Rose Syrup", "Vanilla Syrup"];
+  var juices = ["Pineapple Juice", "Cranberry Juice", "Orange Juice", "Apple Juice", "Tropical Juice", "Coconut Water", "Lemon Juice", "Lime Juice"];
+  var softDrinks = ["Lemonade", "Coke", "Tonic Water", "Red Bull", "Soda Water", "Irn Bru", "Monster"];
+  var fruits = ["Orange Slices", "Lemon Slices", "Strawberries", "Olives", "Mint", "Cucumber", "Basil", "Lime Slices", "Raspberries", "Blueberries", "Pineapple Pieces", "Frozen Mango", "Cherries"];
+
+  function beginFunction() {
+    document.getElementById("ingredientBox").style.display = "block";
+    document.getElementById("beginButton").style.display = "none";
+  }
+
+  function function1() {
+    if (box1Value === "off") {
+      document.getElementById("tickBox1").style.backgroundColor = "darkred";
+      box1Value = "on";
+    } else {
+      document.getElementById("tickBox1").style.background = "none";
+      box1Value = "off";
+    }
+  }
+
+  function function2() {
+    if (box2Value === "off") {
+      document.getElementById("tickBox2").style.backgroundColor = "darkred";
+      box2Value = "on";
+    } else {
+      document.getElementById("tickBox2").style.background = "none";
+      box2Value = "off";
+    }
+  }
+
+  function function3() {
+    if (box3Value === "off") {
+      document.getElementById("tickBox3").style.backgroundColor = "darkred";
+      box3Value = "on";
+    } else {
+      document.getElementById("tickBox3").style.background = "none";
+      box3Value = "off";
+    }
+  }
+
+  function function4() {
+    if (box4Value === "off") {
+      document.getElementById("tickBox4").style.backgroundColor = "darkred";
+      box4Value = "on";
+    } else {
+      document.getElementById("tickBox4").style.background = "none";
+      box4Value = "off";
+    }
+  }
+
+  function function5() {
+    if (box5Value === "off") {
+      document.getElementById("tickBox5").style.backgroundColor = "darkred";
+      box5Value = "on";
+    } else {
+      document.getElementById("tickBox5").style.background = "none";
+      box5Value = "off";
+    }
+  }
+
+  function function6() {
+    if (box6Value === "off") {
+      document.getElementById("tickBox6").style.backgroundColor = "darkred";
+      box6Value = "on";
+    } else {
+      document.getElementById("tickBox6").style.background = "none";
+      box6Value = "off";
+    }
+  }
+
+  function function7() {
+    if (box7Value === "off") {
+      document.getElementById("tickBox7").style.backgroundColor = "darkred";
+      box7Value = "on";
+    } else {
+      document.getElementById("tickBox7").style.background = "none";
+      box7Value = "off";
+    }
+  }
+
+  function function8() {
+    if (box8Value === "off") {
+      document.getElementById("tickBox8").style.backgroundColor = "darkred";
+      box8Value = "on";
+    } else {
+      document.getElementById("tickBox8").style.background = "none";
+      box8Value = "off";
+    }
+  }
+
+  function function9() {
+    if (box9Value === "off") {
+      document.getElementById("tickBox9").style.backgroundColor = "darkred";
+      box9Value = "on";
+    } else {
+      document.getElementById("tickBox9").style.background = "none";
+      box9Value = "off";
+    }
+  }
+
+  function function10() {
+    if (box10Value === "off") {
+      document.getElementById("tickBox10").style.backgroundColor = "darkred";
+      box10Value = "on";
+    } else {
+      document.getElementById("tickBox10").style.background = "none";
+      box10Value = "off";
+    }
+  }
+
+  function function11() {
+    if (box11Value === "off") {
+      document.getElementById("tickBox11").style.backgroundColor = "darkred";
+      box11Value = "on";
+    } else {
+      document.getElementById("tickBox11").style.background = "none";
+      box11Value = "off";
+    }
+  }
+
+  function function12() {
+    if (box12Value === "off") {
+      document.getElementById("tickBox12").style.backgroundColor = "darkred";
+      box12Value = "on";
+    } else {
+      document.getElementById("tickBox12").style.background = "none";
+      box12Value = "off";
+    }
+  }
+
+  function makeFunction() {
+    if (box1Value === "on") {
+      makeFunction1();
+      document.getElementById("ingredient1").style.display = "block";
+    } else {}
+    if (box2Value === "on") {
+      makeFunction2();
+      document.getElementById("ingredient2").style.display = "block";
+    } else {}
+    if (box3Value === "on") {
+      makeFunction3();
+      document.getElementById("ingredient3").style.display = "block";
+    } else {}
+    if (box4Value === "on") {
+      makeFunction4();
+      document.getElementById("ingredient4").style.display = "block";
+    } else {}
+    if (box5Value === "on") {
+      makeFunction5();
+      document.getElementById("ingredient5").style.display = "block";
+    } else {}
+    if (box6Value === "on") {
+      makeFunction6();
+      document.getElementById("ingredient6").style.display = "block";
+    } else {}
+    if (box7Value === "on") {
+      makeFunction7();
+      document.getElementById("ingredient7").style.display = "block";
+    } else {}
+    if (box8Value === "on") {
+      makeFunction8();
+      document.getElementById("ingredient8").style.display = "block";
+    } else {}
+    if (box9Value === "on") {
+      makeFunction9();
+      document.getElementById("ingredient9").style.display = "block";
+    } else {}
+    if (box10Value === "on") {
+      makeFunction10();
+      document.getElementById("ingredient10").style.display = "block";
+    } else {}
+    if (box11Value === "on") {
+      makeFunction11();
+      document.getElementById("ingredient11").style.display = "block";
+    } else {}
+    if (box12Value === "on") {
+      document.getElementById("ingredient12").innerHTML = "Ice";
+      document.getElementById("ingredient12").style.display = "block";
+    } else {}
+    document.getElementById("cocktailBox").style.display = "block";
+    document.getElementById("ingredientBox").style.display = "none";
+  }
+
+  function makeFunction1() {
+    var ingredientValue = Math.floor(Math.random() * 13);
+    for (i = 0; i < 13; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient1").innerHTML = "25mL of " + spirits[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction2() {
+    var ingredientValue = Math.floor(Math.random() * 13);
+    for (i = 0; i < 13; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient2").innerHTML = "25mL of " + spirits[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction3() {
+    var ingredientValue = Math.floor(Math.random() * 13);
+    for (i = 0; i < 13; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient3").innerHTML = "25mL of " + spirits[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction4() {
+    var ingredientValue = Math.floor(Math.random() * 13);
+    for (i = 0; i < 13; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient4").innerHTML = "25mL of " + spirits[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction5() {
+    var ingredientValue = Math.floor(Math.random() * 18);
+    for (i = 0; i < 18; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient5").innerHTML = "25mL of " + liqueurs[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction6() {
+    var ingredientValue = Math.floor(Math.random() * 16);
+    for (i = 0; i < 16; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient6").innerHTML = "One shot of " + fruitSyrups[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction7() {
+    var ingredientValue = Math.floor(Math.random() * 11);
+    for (i = 0; i < 11; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient7").innerHTML = "One shot of " + otherSyrups[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction8() {
+    var ingredientValue = Math.floor(Math.random() * 8);
+    for (i = 0; i < 8; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient8").innerHTML = "50mL of " + juices[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction9() {
+    var ingredientValue = Math.floor(Math.random() * 8);
+    for (i = 0; i < 8; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient9").innerHTML = "50mL of " + juices[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction10() {
+    var ingredientValue = Math.floor(Math.random() * 7);
+    for (i = 0; i < 7; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient10").innerHTML = "150mL of " + softDrinks[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function makeFunction11() {
+    var ingredientValue = Math.floor(Math.random() * 13);
+    for (i = 0; i < 13; i++) {
+      if (i === ingredientValue) {
+        document.getElementById("ingredient11").innerHTML = fruits[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+  }
+
+  function refreshFunction() {
+    location.reload();
+    return false;
+  }
+  </script>
+</head>
+<body>
+<div class = "webpage">
+  <div class = "buttonDiv">
+    <button class = "returnButton" onclick = "window.open('portfolio', '_self');">Return to app portfolio</button>
+  </div>
+  <div class = "headingBox">
+    <h1 class = "heading">The completely random cocktail maker</h1>
+  </div>
+  <div id = "gameBox">
+    <div class = "instructionBox">
+      <h2>Instructions</h2>
+      <p class = "gameText">Click the button to begin the process of generating yourself a beverage.</p>
+      <p class = "gameText">Once you start, select different categories of ingredients to begin building your drink.</p>
+      <p class = "gameText">Click the Finish Drink button to see what the computer has suggested you.</p>
+      <p class = "gameText">P.S. For liability reasons, please drink alcohol safely. Some of these drinks are also very likely not going to taste nice at all.</p>
+      <div class = "startButtonBox"><input type = "button" id = "beginButton" class = "gameButton" onclick = "beginFunction()" value = "Start mixing"/></div>
+    </div>
+  </div>
+  <div id = "ingredientBox">
+    <h2>Select your Ingredients</h2>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function1()" value = "25mL spirit"/></div>
+      <div class = "rightBox"><div id = "tickBox1" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function2()" value = "25mL spirit"/></div>
+      <div class = "rightBox"><div id = "tickBox2" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function3()" value = "25mL spirit"/></div>
+      <div class = "rightBox"><div id = "tickBox3" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function4()" value = "25mL spirit"/></div>
+      <div class = "rightBox"><div id = "tickBox4" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function5()" value = "25mL liqueur"/></div>
+      <div class = "rightBox"><div id = "tickBox5" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function6()" value = "Fruity syrup"/></div>
+      <div class = "rightBox"><div id = "tickBox6" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function7()" value = "Other syrup"/></div>
+      <div class = "rightBox"><div id = "tickBox7" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function8()" value = "50mL juice"/></div>
+      <div class = "rightBox"><div id = "tickBox8" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function9()" value = "50mL juice"/></div>
+      <div class = "rightBox"><div id = "tickBox9" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function10()" value = "Soft drink"/></div>
+      <div class = "rightBox"><div id = "tickBox10" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function11()" value = "Sliced fruit"/></div>
+      <div class = "rightBox"><div id = "tickBox11" class = "tickBox"></div></div>
+    </div>
+    <div class = "singleBox">
+      <div class = "buttonBox"><input type = "button" class = "gameButton" onclick = "function12()" value = "Ice"/></div>
+      <div class = "rightBox"><div id = "tickBox12" class = "tickBox"></div></div>
+    </div>
+    <div class = "startButtonBox"><input type = "button" class = "gameButton" id = "makeButton" onclick = "makeFunction()" value = "Make drink!"/></div>
+  </div>
+  <div id = "cocktailBox">
+    <h2 style = "text-align: center;">Your cocktail recipe!</h2>
+    <p class = "ingredient" id = "ingredient1">Item</p>
+    <p class = "ingredient" id = "ingredient2">Item</p>
+    <p class = "ingredient" id = "ingredient3">Item</p>
+    <p class = "ingredient" id = "ingredient4">Item</p>
+    <p class = "ingredient" id = "ingredient5">Item</p>
+    <p class = "ingredient" id = "ingredient6">Item</p>
+    <p class = "ingredient" id = "ingredient7">Item</p>
+    <p class = "ingredient" id = "ingredient8">Item</p>
+    <p class = "ingredient" id = "ingredient9">Item</p>
+    <p class = "ingredient" id = "ingredient10">Item</p>
+    <p class = "ingredient" id = "ingredient11">Item</p>
+    <p class = "ingredient" id = "ingredient12">Item</p>
+    <div class = "startButtonBox"><input type = "button" class = "gameButton" id = "refreshButton" onclick = "refreshFunction()" value = "Make another drink!"/></div>
+  </div>
+  <div class = "whiteBar"></div>
+</div>
+</body>
+</html>
