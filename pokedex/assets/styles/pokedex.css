@@ -1,0 +1,162 @@
+#pokedex {
+  max-width: 1230px;
+  height: auto;
+  margin: 20px;
+  background-color: white;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+#pokedex-heading {
+  margin-top: 20px;
+}
+
+.pokedex-filter-box {
+  height: 80px;
+  width: calc(100% / 4);
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .pokedex-filter-box {
+    width: calc(100% / 2);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .pokedex-filter-box {
+    width: 100%;
+  }
+}
+
+#pokedex-filter {
+  font-size: 16px;
+  outline: none;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+  margin-right: 10px;
+}
+
+#pokedex-filter-button {
+  font-size: 16px;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+}
+
+#pokedex-filter-button:hover {
+  cursor: pointer;
+}
+
+#pokedex-search-input {
+  font-size: 16px;
+  outline: none;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+  margin-right: 10px;
+}
+
+#pokedex-search-button {
+  font-size: 16px;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+}
+
+#pokedex-search-button:hover {
+  cursor: pointer;
+}
+
+#pokedex-title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#pokedex-content {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  float: left;
+}
+
+.pokedex-card {
+  width: 120px;
+  height: 150px;
+  margin-left: 30px;
+  float: left;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+.card-image {
+  width: 80%;
+  height: 96px;
+  margin: 12px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.card-image:hover {
+  cursor: pointer;
+}
+
+.card-text {
+  width: 100%;
+  height: 20px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.card-ID {
+  color: #888888;
+}
+
+.card-name {
+  color: #c54b4a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card-type {
+  text-decoration: none;
+}
+
+.card-type:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.card-text-two-types {
+  width: 35%;
+  margin-left: 10%;
+  height: 20px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.white-bottom {
+  width: 100%;
+  height: 20px;
+  float: left;
+  background-color: white;
+}

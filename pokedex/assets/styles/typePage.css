@@ -1,0 +1,140 @@
+#type-page {
+  display: none;
+  max-width: 1230px;
+  height: auto;
+  margin: 20px;
+  background-color: white;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.type-page-navigation {
+  width: 100%;
+  height: 60px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#type-page-return-to-pokedex {
+  font-size: 16px;
+  color: #c54b4a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#type-page-return-to-pokedex:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#type-page-pokemon {
+  width: calc(100% - 40px);
+  height: auto;
+  overflow: auto;
+  padding: 20px;
+  float: left;
+}
+
+#type-page-pokemon-table {
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  float: left;
+}
+
+.type-page-pokemon-row {
+  height: 80px !important;
+}
+
+.type-page-pokemon-header {
+  background-color: #dddddd !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type-page-pokemon-square {
+  width: 76px;
+  height: 76px;
+  margin-right: 2px;
+  float: left;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.type-page-pokemon-wide {
+  width: 269px;
+  height: 76px;
+  margin-right: 2px;
+  float: left;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.type-page-pokemon-sprite:hover {
+  cursor: pointer;
+}
+
+.type-page-type {
+  margin-right: 5px !important;
+  margin-left: 5px;
+}
+
+#type-page-moves {
+  width: calc(100% - 40px);
+  height: auto;
+  overflow: auto;
+  padding: 20px;
+  float: left;
+}
+
+#type-page-moves-table {
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  float: left;
+}
+
+.type-page-moves-row {
+  height: 50px !important;
+}
+
+.type-page-moves-header {
+  background-color: #dddddd !important;
+  justify-content: center !important;
+  font-weight: bold;
+}
+
+.type-page-moves-small {
+  width: 100px;
+  height: 46px;
+  margin-right: 2px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-page-moves-name {
+  width: 200px;
+  height: 46px;
+  margin-right: 2px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-page-moves-effect {
+  width: 458px;
+  height: 46px;
+  margin-right: 2px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

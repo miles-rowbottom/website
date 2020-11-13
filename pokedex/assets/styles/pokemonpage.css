@@ -1,0 +1,288 @@
+#pokemon-page {
+  display: none;
+  max-width: 1230px;
+  height: auto;
+  margin: 20px;
+  background-color: white;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.pokemon-page-navigation-column {
+  width: calc(100% / 3);
+  height: 60px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-page-navigation-button {
+  font-size: 16px;
+  color: #c54b4a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pokemon-page-navigation-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#pokemon-description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#pokemon-main-image {
+  height: 370px;
+  width: 370px;
+  padding: 20px;
+  float: left;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#pokemon-base-stats {
+  height: 370px;
+  width: 780px;
+  padding: 20px;
+  float: left;
+}
+
+table {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  float: left;
+  border-top: 1px solid #bbbbbb;
+}
+
+tr {
+  width: 100%;
+  height: 39px;
+  float: left;
+  border-bottom: 1px solid #bbbbbb;
+  overflow: auto;
+}
+
+td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  overflow: auto;
+}
+
+.base-stats-name {
+  width: 100px;
+  height: 35px;
+  float: left;
+  color: #666666;
+}
+
+.base-stats-value {
+  width: 80px;
+  height: 35px;
+  float: left;
+}
+
+#base-stat-total {
+  font-weight: bold;
+}
+
+.base-stats-bar {
+  width: calc(100% - 350px);
+  height: 35px;
+  float: left;
+  justify-content: flex-start !important;
+}
+
+.base-stats-bar-adjust {
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid;
+  float: left;
+  border-color: black;
+}
+
+.base-stats-max-min {
+  color: #666666;
+}
+
+#pokemon-pokedex-data {
+  width: 370px;
+  height: 330px;
+  float: left;
+  padding: 20px;
+}
+
+#pokemon-training {
+  width: 370px;
+  height: 330px;
+  float: left;
+  padding: 20px;
+}
+
+#pokemon-breeding {
+  width: 370px;
+  height: 330px;
+  float: left;
+  padding: 20px;
+}
+
+.two-column-cell {
+  height: 35px;
+  float: left;
+}
+
+.two-column-left {
+  justify-content: flex-end !important;
+  color: #666666;
+  width: 100px;
+  padding-right: 10px;
+}
+
+.two-column-right {
+  justify-content: flex-start !important;
+  width: calc(100% - 130px);
+  padding-left: 10px;
+}
+
+.two-column-left-wide {
+  justify-content: flex-end !important;
+  color: #666666;
+  width: 120px;
+  padding-right: 10px;
+}
+.two-column-right-wide {
+  justify-content: flex-start !important;
+  width: calc(100% - 150px);
+  padding-left: 10px;
+}
+
+.pokedex-data-type {
+  width: 80px;
+  height: 25px;
+  margin-right: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.pokedex-data-type:hover {
+  cursor: pointer;
+}
+
+#pokedex-data-type-2 {
+  display: none;
+}
+
+#type-defenses-intro {
+  margin-bottom: 20px;
+}
+
+#type-defenses {
+  width: 1190px;
+  height: 240px;
+  float: left;
+  padding: 20px;
+}
+
+.type-defenses-cell {
+  width: calc((100% - 36px) / 18);
+  height: 35px;
+  float: left;
+}
+
+.type-defenses-type {
+  width: 100%;
+  height: 25px;
+  margin-right: 0px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px #000000;
+  font-size: 12px;
+}
+
+.type-defenses-type:hover {
+  cursor: pointer;
+}
+
+.type-defenses-value {
+  margin: 5px 1px 0px 1px;
+  width: calc((100% - 90px) / 18);
+  height: 25px;
+  float: left;
+  margin-right: 0px;
+  border: 1px solid;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+#evolution-chain {
+  width: calc(100% - 40px);
+  height: 300px;
+  padding: 20px;
+  float: left;
+}
+
+#evolution-chart-box {
+  width: 100%;
+  height: 180px;
+  float: left;
+}
+
+.evolution-chart {
+  width: auto;
+  height: auto;
+  overflow: auto;
+  background-color: white;
+  padding-right: 30px;
+}
+
+#evolution-chart-1 {
+  display: none;
+}
+
+#evolution-chart-2 {
+  display: none;
+}
+
+#evolution-chart-3 {
+  display: none;
+}
+
+.evolution-chart-small-box {
+  width: 100%;
+  height: 90px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 14px;
+}
+
+.evolution-chart-arrow {
+  margin-top: 60px;
+  margin-left: 30px;
+  width: calc(100% / 2) !important;
+  height: 30px !important;
+  background-image: url('images/evolution-arrow.png');
+}
