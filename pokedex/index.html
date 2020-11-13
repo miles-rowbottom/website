@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon Database</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <link rel="stylesheet" href="assets/styles/pokedex.css" />
+    <link rel="stylesheet" href="assets/styles/pokemonpage.css" />
+    <link rel="stylesheet" href="assets/styles/typePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+    />
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/data.js" defer></script>
+    <script src="assets/scripts/pokedex.js" defer></script>
+    <script src="assets/scripts/pokemonPageElements.js" defer></script>
+    <script src="assets/scripts/pokemonpage.js" defer></script>
+    <script src="assets/scripts/evolutionChain.js" defer></script>
+    <script src="assets/scripts/typePageElements.js" defer></script>
+    <script src="assets/scripts/typePage.js" defer></script>
+  </head>
+  <body>
+    <section class="container">
+      <section id="pokedex">
+        <h1 id="pokedex-heading">Complete Pokedex</h1>
+        <section class="pokedex-filter-box">
+          <h3>Filter by generation:</h3>
+        </section>
+        <section class="pokedex-filter-box">
+          <select id="pokedex-filter">
+            <option value="All Generations">All Generations</option>
+            <option value="Generation 1">Generation 1</option>
+            <option value="Generation 2">Generation 2</option>
+            <option value="Generation 3">Generation 3</option>
+            <option value="Generation 4">Generation 4</option>
+            <option value="Generation 5">Generation 5</option>
+            <option value="Generation 6">Generation 6</option>
+            <option value="Generation 7">Generation 7</option>
+          </select>
+          <input type="button" id="pokedex-filter-button" value="Filter" />
+        </section>
+        <section class="pokedex-filter-box">
+          <h3>Search by species name or ID:</h3>
+        </section>
+        <section class="pokedex-filter-box">
+          <input type="search" id="pokedex-search-input" />
+          <input type="button" id="pokedex-search-button" value="Search" />
+        </section>
+        <h2 id="pokedex-title">All Generations</h2>
+        <section id="pokedex-content" style="float: left"></section>
+      </section>
+      <section id="pokemon-page">
+        <section class="pokemon-page-navigation-column">
+          <span
+            class="pokemon-page-navigation-button"
+            id="previous-pokemon"
+          ></span>
+        </section>
+        <section class="pokemon-page-navigation-column">
+          <span class="pokemon-page-navigation-button" id="return-to-pokedex"
+            >Return to Pokedex</span
+          >
+        </section>
+        <section class="pokemon-page-navigation-column">
+          <span class="pokemon-page-navigation-button" id="next-pokemon"></span>
+        </section>
+        <h1 id="pokemon-header"></h1>
+        <p id="pokemon-description">
+          <span id="pokemon-description-name"></span> is a
+          <span id="pokemon-description-types"></span> type Pokemon introduced
+          in Generation <span id="pokemon-description-generation"></span>.
+        </p>
+        <section id="pokemon-main-image"></section>
+        <section id="pokemon-base-stats">
+          <h2>Base Stats</h2>
+          <table id="base-stats-table">
+            <tr>
+              <td class="base-stats-name">HP</td>
+              <td class="base-stats-value" id="base-stat-0"></td>
+              <td class="base-stats-bar">
+                <span class="base-stats-bar-adjust" id="base-stat-0-bar"></span>
+              </td>
+              <td class="base-stats-value" id="base-stat-0-min"></td>
+              <td class="base-stats-value" id="base-stat-0-max"></td>
+            </tr>
+            <tr>
+              <td class="base-stats-name">Attack</td>
+              <td class="base-stats-value" id="base-stat-1"></td>
+              <td class="base-stats-bar">
+                <span class="base-stats-bar-adjust" id="base-stat-1-bar"></span>
+              </td>
+              <td class="base-stats-value" id="base-stat-1-min"></td>
+              <td class="base-stats-value" id="base-stat-1-max"></td>
+            </tr>
+            <tr>
+              <td class="base-stats-name">Defense</td>
+              <td class="base-stats-value" id="base-stat-2"></td>
+              <td class="base-stats-bar">
+                <span class="base-stats-bar-adjust" id="base-stat-2-bar"></span>
+              </td>
+              <td class="base-stats-value" id="base-stat-2-min"></td>
+              <td class="base-stats-value" id="base-stat-2-max"></td>
+            </tr>
+            <tr>
+              <td class="base-stats-name">Sp. Atk</td>
+              <td class="base-stats-value" id="base-stat-3"></td>
+              <td class="base-stats-bar">
+                <span class="base-stats-bar-adjust" id="base-stat-3-bar"></span>
+              </td>
+              <td class="base-stats-value" id="base-stat-3-min"></td>
+              <td class="base-stats-value" id="base-stat-3-max"></td>
+            </tr>
+            <tr>
+              <td class="base-stats-name">Sp.Def</td>
+              <td class="base-stats-value" id="base-stat-4"></td>
+              <td class="base-stats-bar">
+                <span class="base-stats-bar-adjust" id="base-stat-4-bar"></span>
+              </td>
+              <td class="base-stats-value" id="base-stat-4-min"></td>
+              <td class="base-stats-value" id="base-stat-4-max"></td>
+            </tr>
+            <tr>
+              <td class="base-stats-name">Speed</td>
+              <td class="base-stats-value" id="base-stat-5"></td>
+              <td class="base-stats-bar">
+                <span class="base-stats-bar-adjust" id="base-stat-5-bar"></span>
+              </td>
+              <td class="base-stats-value" id="base-stat-5-min"></td>
+              <td class="base-stats-value" id="base-stat-5-max"></td>
+            </tr>
+            <tr>
+              <td class="base-stats-name">Total</td>
+              <td class="base-stats-value" id="base-stat-total"></td>
+              <td class="base-stats-bar"></td>
+              <td class="base-stats-value base-stats-max-min">Min</td>
+              <td class="base-stats-value base-stats-max-min">Max</td>
+            </tr>
+          </table>
+        </section>
+        <section id="pokemon-pokedex-data">
+          <h2>Pokedex Data</h2>
+          <table id="pokedex-data-table">
+            <tr>
+              <td class="two-column-cell two-column-left">National No</td>
+              <td
+                class="two-column-cell two-column-right"
+                id="pokedex-data-national-number"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left">Type</td>
+              <td class="two-column-cell two-column-right">
+                <a class="pokedex-data-type type" id="pokedex-data-type-1"></a>
+                <a class="pokedex-data-type type" id="pokedex-data-type-2"></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left">Species</td>
+              <td
+                class="two-column-cell two-column-right"
+                id="pokedex-data-species"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left">Height</td>
+              <td
+                class="two-column-cell two-column-right"
+                id="pokedex-data-height"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left">Weight</td>
+              <td
+                class="two-column-cell two-column-right"
+                id="pokedex-data-weight"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left">Abilities</td>
+              <td
+                class="two-column-cell two-column-right"
+                id="pokedex-data-abilities"
+              ></td>
+            </tr>
+          </table>
+        </section>
+        <section id="pokemon-training">
+          <h2>Training</h2>
+          <table id="training-table">
+            <tr>
+              <td class="two-column-cell two-column-left-wide">EV yield</td>
+              <td
+                class="two-column-cell two-column-right-wide"
+                id="training-EV-yield"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left-wide">Catch rate</td>
+              <td
+                class="two-column-cell two-column-right-wide"
+                id="training-catch-rate"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left-wide">
+                Base Friendship
+              </td>
+              <td
+                class="two-column-cell two-column-right-wide"
+                id="training-base-friendship"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left-wide">Base Exp.</td>
+              <td
+                class="two-column-cell two-column-right-wide"
+                id="training-base-experience"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left-wide">Growth Rate</td>
+              <td
+                class="two-column-cell two-column-right-wide"
+                id="training-growth-rate"
+              ></td>
+            </tr>
+          </table>
+        </section>
+        <section id="pokemon-breeding">
+          <h2>Breeding</h2>
+          <table id="breeding-table">
+            <tr>
+              <td class="two-column-cell two-column-left">Egg Groups</td>
+              <td
+                class="two-column-cell two-column-right"
+                id="breeding-egg-groups"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left">Gender</td>
+              <td
+                class="two-column-cell two-column-right"
+                id="breeding-gender"
+              ></td>
+            </tr>
+            <tr>
+              <td class="two-column-cell two-column-left">Egg cycles</td>
+              <td
+                class="two-column-cell two-column-right"
+                id="breeding-egg-cycles"
+              ></td>
+            </tr>
+          </table>
+        </section>
+        <section id="type-defenses">
+          <h2>Type defenses</h2>
+          <p id="type-defenses-intro"></p>
+          <table id="type-defenses-table">
+            <tr>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-0"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-1"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-2"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-3"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-4"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-5"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-6"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-7"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-8"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-9"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-10"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-11"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-12"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-13"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-14"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-15"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-16"></a>
+              </td>
+              <td class="type-defenses-cell">
+                <a class="type-defenses-type" id="type-defenses-17"></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="type-defenses-value" id="type-defenses-value-0"></td>
+              <td class="type-defenses-value" id="type-defenses-value-1"></td>
+              <td class="type-defenses-value" id="type-defenses-value-2"></td>
+              <td class="type-defenses-value" id="type-defenses-value-3"></td>
+              <td class="type-defenses-value" id="type-defenses-value-4"></td>
+              <td class="type-defenses-value" id="type-defenses-value-5"></td>
+              <td class="type-defenses-value" id="type-defenses-value-6"></td>
+              <td class="type-defenses-value" id="type-defenses-value-7"></td>
+              <td class="type-defenses-value" id="type-defenses-value-8"></td>
+              <td class="type-defenses-value" id="type-defenses-value-9"></td>
+              <td class="type-defenses-value" id="type-defenses-value-10"></td>
+              <td class="type-defenses-value" id="type-defenses-value-11"></td>
+              <td class="type-defenses-value" id="type-defenses-value-12"></td>
+              <td class="type-defenses-value" id="type-defenses-value-13"></td>
+              <td class="type-defenses-value" id="type-defenses-value-14"></td>
+              <td class="type-defenses-value" id="type-defenses-value-15"></td>
+              <td class="type-defenses-value" id="type-defenses-value-16"></td>
+              <td class="type-defenses-value" id="type-defenses-value-17"></td>
+            </tr>
+          </table>
+        </section>
+        <section id="evolution-chain">
+          <h2>Evolution Chain</h2>
+          <p id="evolution-chain-statement"></p>
+          <section id="evolution-chart-box">
+            <section class="evolution-chart" id="evolution-chart"></section>
+            <section class="evolution-chart" id="evolution-chart-1"></section>
+            <section class="evolution-chart" id="evolution-chart-2"></section>
+            <section class="evolution-chart" id="evolution-chart-3"></section>
+          </section>
+        </section>
+      </section>
+      <section id="type-page">
+        <section class="type-page-navigation">
+          <a id="type-page-return-to-pokedex">Return to Pokedex</a>
+        </section>
+        <h1 id="type-page-title"></h1>
+        <section id="type-page-pokemon">
+          <h2 id="type-page-pokemon-heading"></h2>
+          <table id="type-page-pokemon-table">
+            <tr
+              class="type-page-pokemon-row"
+              id="type-page-pokemon-table-header"
+            >
+              <td class="type-page-pokemon-square type-page-pokemon-header">
+                Sprite
+              </td>
+              <td class="type-page-pokemon-square type-page-pokemon-header">
+                ID
+              </td>
+              <td class="type-page-pokemon-wide type-page-pokemon-header">
+                Name
+              </td>
+              <td class="type-page-pokemon-wide type-page-pokemon-header">
+                Type(s)
+              </td>
+              <td class="type-page-pokemon-square type-page-pokemon-header">
+                Base HP
+              </td>
+              <td class="type-page-pokemon-square type-page-pokemon-header">
+                Base<br />Attack
+              </td>
+              <td class="type-page-pokemon-square type-page-pokemon-header">
+                Base Defense
+              </td>
+              <td class="type-page-pokemon-square type-page-pokemon-header">
+                Base Sp. Attack
+              </td>
+              <td class="type-page-pokemon-square type-page-pokemon-header">
+                Base Sp. Defense
+              </td>
+              <td class="type-page-pokemon-square type-page-pokemon-header">
+                Base<br />Speed
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section id="type-page-moves">
+          <h2 id="type-page-moves-heading"></h2>
+          <table id="type-page-moves-table">
+            <tr class="type-page-moves-row" id="type-page-moves-table-header">
+              <td class="type-page-moves-name type-page-moves-header">Name</td>
+              <td class="type-page-moves-small type-page-moves-header">Type</td>
+              <td class="type-page-moves-small type-page-moves-header">
+                Category
+              </td>
+              <td class="type-page-moves-small type-page-moves-header">
+                Power
+              </td>
+              <td class="type-page-moves-small type-page-moves-header">
+                Accuracy
+              </td>
+              <td class="type-page-moves-small type-page-moves-header">PP</td>
+              <td class="type-page-moves-effect type-page-moves-header">
+                Effect
+              </td>
+            </tr>
+          </table>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>
