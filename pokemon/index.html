@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon Comparison</title>
+    <link rel="stylesheet" href="assets/styles/general.css" />
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+    />
+    <script src="assets/scripts/data.js" defer></script>
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/conversions.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <section id="white-container">
+      <h1 id="page-title">Compare Pokemon</h1>
+      <p>Select up to <strong>six</strong> pokemon to use in your comparison.</p>
+      <p style="margin-bottom: 10px"><strong>Version</strong> to use for the moves:</p>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="red-blue-radio"
+          value="red-blue-radio"
+          name="generation"
+        />
+        <label for="red-blue-radio"> Red-Blue</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="yellow-radio"
+          value="yellow-radio"
+          name="generation"
+        />
+        <label for="yellow-radio"> Yellow</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="gold-silver-radio"
+          value="gold-silver-radio"
+          name="generation"
+        />
+        <label for="gold-silver-radio"> Gold-Silver</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="crystal-radio"
+          value="crystal-radio"
+          name="generation"
+        />
+        <label for="crystal-radio"> Crystal</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="ruby-sapphire-radio"
+          value="ruby-sapphire-radio"
+          name="generation"
+        />
+        <label for="ruby-sapphire-radio"> Ruby-Sapphire</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="emerald-radio"
+          value="emerald-radio"
+          name="generation"
+        />
+        <label for="emerald-radio"> Emerald</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="firered-leafgreen-radio"
+          value="firered-leafgreen-radio"
+          name="generation"
+        />
+        <label for="firered-leafgreen-radio"> Firered-Leafgreen</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="diamond-pearl-radio"
+          value="diamond-pearl-radio"
+          name="generation"
+        />
+        <label for="diamond-pearl-radio"> Diamond-Pearl</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="platinum-radio"
+          value="platinum-radio"
+          name="generation"
+        />
+        <label for="platinum-radio"> Platinum</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="heartgold-soulsilver-radio"
+          value="heartgold-soulsilver-radio"
+          name="generation"
+        />
+        <label for="heartgold-soulsilver-radio"> Heartgold-Soulsilver</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="black-white-radio"
+          value="black-white-radio"
+          name="generation"
+        />
+        <label for="black-white-radio"> Black-White</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="colosseum-radio"
+          value="colosseum-radio"
+          name="generation"
+        />
+        <label for="colosseum-radio"> Colosseum</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="xd-radio"
+          value="xd-radio"
+          name="generation"
+        />
+        <label for="xd-radio"> XD</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="black-2-white-2-radio"
+          value="black-2-white-2-radio"
+          name="generation"
+        />
+        <label for="black-2-white-2-radio"> Black 2-White 2</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="x-y-radio"
+          value="x-y-radio"
+          name="generation"
+        />
+        <label for="x-y-radio"> X-Y</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="omega-ruby-alpha-sapphire-radio"
+          value="omega-ruby-alpha-sapphire-radio"
+          name="generation"
+        />
+        <label for="omega-ruby-alpha-sapphire-radio"> Omega Ruby-Alpha Sapphire</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="sun-moon-radio"
+          value="sun-moon-radio"
+          name="generation"
+        />
+        <label for="sun-moon-radio"> Sun-Moon</label>
+      </section>
+      <section class="radio-box">
+        <input
+          type="radio"
+          id="ultra-sun-ultra-moon-radio"
+          value="ultra-sun-ultra-moon-radio"
+          name="generation"
+        />
+        <label for="ultra-sun-ultra-moon-radio"> Ultra Sun-Ultra Moon</label>
+      </section>
+      <table id="entire-table">
+        <tr id="table-search-row">
+          <td class="left-cell" id="search-button-box">
+            <input type="button" id="search-button" value="Search" />
+          </td>
+          <td class="column-cell">
+            <input type="search" class="search-input" id="search-input-0" />
+          </td>
+          <td class="column-cell">
+            <input type="search" class="search-input" id="search-input-1" />
+          </td>
+          <td class="column-cell">
+            <input type="search" class="search-input" id="search-input-2" />
+          </td>
+          <td class="column-cell">
+            <input type="search" class="search-input" id="search-input-3" />
+          </td>
+          <td class="column-cell">
+            <input type="search" class="search-input" id="search-input-4" />
+          </td>
+          <td class="column-cell">
+            <input type="search" class="search-input" id="search-input-5" />
+          </td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Name</td>
+          <td class="column-cell" id="name-cell-0"></td>
+          <td class="column-cell" id="name-cell-1"></td>
+          <td class="column-cell" id="name-cell-2"></td>
+          <td class="column-cell" id="name-cell-3"></td>
+          <td class="column-cell" id="name-cell-4"></td>
+          <td class="column-cell" id="name-cell-5"></td>
+        </tr>
+        <tr class="result-row grey-row">
+          <td class="left-cell">Sprite</td>
+          <td class="column-cell" id="sprite-cell-0"></td>
+          <td class="column-cell" id="sprite-cell-1"></td>
+          <td class="column-cell" id="sprite-cell-2"></td>
+          <td class="column-cell" id="sprite-cell-3"></td>
+          <td class="column-cell" id="sprite-cell-4"></td>
+          <td class="column-cell" id="sprite-cell-5"></td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Type</td>
+          <td class="column-cell" id="type-cell-0"></td>
+          <td class="column-cell" id="type-cell-1"></td>
+          <td class="column-cell" id="type-cell-2"></td>
+          <td class="column-cell" id="type-cell-3"></td>
+          <td class="column-cell" id="type-cell-4"></td>
+          <td class="column-cell" id="type-cell-5"></td>
+        </tr>
+        <tr class="result-row grey-row">
+          <td class="left-cell">Abilities</td>
+          <td class="column-cell" id="ability-cell-0"></td>
+          <td class="column-cell" id="ability-cell-1"></td>
+          <td class="column-cell" id="ability-cell-2"></td>
+          <td class="column-cell" id="ability-cell-3"></td>
+          <td class="column-cell" id="ability-cell-4"></td>
+          <td class="column-cell" id="ability-cell-5"></td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Hidden Ability</td>
+          <td class="column-cell" id="hidden-ability-cell-0"></td>
+          <td class="column-cell" id="hidden-ability-cell-1"></td>
+          <td class="column-cell" id="hidden-ability-cell-2"></td>
+          <td class="column-cell" id="hidden-ability-cell-3"></td>
+          <td class="column-cell" id="hidden-ability-cell-4"></td>
+          <td class="column-cell" id="hidden-ability-cell-5"></td>
+        </tr>
+        <tr class="section-row">
+          <td class="section-row-cell">Breeding + Training</td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Egg Groups</td>
+          <td class="column-cell" id="egg-group-cell-0"></td>
+          <td class="column-cell" id="egg-group-cell-1"></td>
+          <td class="column-cell" id="egg-group-cell-2"></td>
+          <td class="column-cell" id="egg-group-cell-3"></td>
+          <td class="column-cell" id="egg-group-cell-4"></td>
+          <td class="column-cell" id="egg-group-cell-5"></td>
+        </tr>
+        <tr class="result-row grey-row">
+          <td class="left-cell">Gender</td>
+          <td class="column-cell" id="gender-rate-cell-0"></td>
+          <td class="column-cell" id="gender-rate-cell-1"></td>
+          <td class="column-cell" id="gender-rate-cell-2"></td>
+          <td class="column-cell" id="gender-rate-cell-3"></td>
+          <td class="column-cell" id="gender-rate-cell-4"></td>
+          <td class="column-cell" id="gender-rate-cell-5"></td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Base EXP</td>
+          <td class="column-cell" id="base-exp-cell-0"></td>
+          <td class="column-cell" id="base-exp-cell-1"></td>
+          <td class="column-cell" id="base-exp-cell-2"></td>
+          <td class="column-cell" id="base-exp-cell-3"></td>
+          <td class="column-cell" id="base-exp-cell-4"></td>
+          <td class="column-cell" id="base-exp-cell-5"></td>
+        </tr>
+        <tr class="result-row grey-row">
+          <td class="left-cell">Base Happiness</td>
+          <td class="column-cell" id="base-happiness-cell-0"></td>
+          <td class="column-cell" id="base-happiness-cell-1"></td>
+          <td class="column-cell" id="base-happiness-cell-2"></td>
+          <td class="column-cell" id="base-happiness-cell-3"></td>
+          <td class="column-cell" id="base-happiness-cell-4"></td>
+          <td class="column-cell" id="base-happiness-cell-5"></td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Capture Rate</td>
+          <td class="column-cell" id="capture-rate-cell-0"></td>
+          <td class="column-cell" id="capture-rate-cell-1"></td>
+          <td class="column-cell" id="capture-rate-cell-2"></td>
+          <td class="column-cell" id="capture-rate-cell-3"></td>
+          <td class="column-cell" id="capture-rate-cell-4"></td>
+          <td class="column-cell" id="capture-rate-cell-5"></td>
+        </tr>
+        <tr class="section-row">
+          <td class="section-row-cell">Stats</td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">HP</td>
+          <td class="column-cell" id="base-HP-cell-0"></td>
+          <td class="column-cell" id="base-HP-cell-1"></td>
+          <td class="column-cell" id="base-HP-cell-2"></td>
+          <td class="column-cell" id="base-HP-cell-3"></td>
+          <td class="column-cell" id="base-HP-cell-4"></td>
+          <td class="column-cell" id="base-HP-cell-5"></td>
+        </tr>
+        <tr class="result-row grey-row">
+          <td class="left-cell">Attack</td>
+          <td class="column-cell" id="base-attack-cell-0"></td>
+          <td class="column-cell" id="base-attack-cell-1"></td>
+          <td class="column-cell" id="base-attack-cell-2"></td>
+          <td class="column-cell" id="base-attack-cell-3"></td>
+          <td class="column-cell" id="base-attack-cell-4"></td>
+          <td class="column-cell" id="base-attack-cell-5"></td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Defense</td>
+          <td class="column-cell" id="base-defense-cell-0"></td>
+          <td class="column-cell" id="base-defense-cell-1"></td>
+          <td class="column-cell" id="base-defense-cell-2"></td>
+          <td class="column-cell" id="base-defense-cell-3"></td>
+          <td class="column-cell" id="base-defense-cell-4"></td>
+          <td class="column-cell" id="base-defense-cell-5"></td>
+        </tr>
+        <tr class="result-row grey-row">
+          <td class="left-cell">Special Attack</td>
+          <td class="column-cell" id="base-special-attack-cell-0"></td>
+          <td class="column-cell" id="base-special-attack-cell-1"></td>
+          <td class="column-cell" id="base-special-attack-cell-2"></td>
+          <td class="column-cell" id="base-special-attack-cell-3"></td>
+          <td class="column-cell" id="base-special-attack-cell-4"></td>
+          <td class="column-cell" id="base-special-attack-cell-5"></td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Special Defense</td>
+          <td class="column-cell" id="base-special-defense-cell-0"></td>
+          <td class="column-cell" id="base-special-defense-cell-1"></td>
+          <td class="column-cell" id="base-special-defense-cell-2"></td>
+          <td class="column-cell" id="base-special-defense-cell-3"></td>
+          <td class="column-cell" id="base-special-defense-cell-4"></td>
+          <td class="column-cell" id="base-special-defense-cell-5"></td>
+        </tr>
+        <tr class="result-row grey-row">
+          <td class="left-cell">Speed</td>
+          <td class="column-cell" id="base-speed-cell-0"></td>
+          <td class="column-cell" id="base-speed-cell-1"></td>
+          <td class="column-cell" id="base-speed-cell-2"></td>
+          <td class="column-cell" id="base-speed-cell-3"></td>
+          <td class="column-cell" id="base-speed-cell-4"></td>
+          <td class="column-cell" id="base-speed-cell-5"></td>
+        </tr>
+        <tr class="result-row white-row">
+          <td class="left-cell">Total</td>
+          <td class="column-cell" id="base-total-cell-0"></td>
+          <td class="column-cell" id="base-total-cell-1"></td>
+          <td class="column-cell" id="base-total-cell-2"></td>
+          <td class="column-cell" id="base-total-cell-3"></td>
+          <td class="column-cell" id="base-total-cell-4"></td>
+          <td class="column-cell" id="base-total-cell-5"></td>
+        </tr>
+        <tr class="result-row grey-row">
+          <td class="left-cell">Effort value</td>
+          <td class="column-cell" id="effort-value-cell-0"></td>
+          <td class="column-cell" id="effort-value-cell-1"></td>
+          <td class="column-cell" id="effort-value-cell-2"></td>
+          <td class="column-cell" id="effort-value-cell-3"></td>
+          <td class="column-cell" id="effort-value-cell-4"></td>
+          <td class="column-cell" id="effort-value-cell-5"></td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
