@@ -35,16 +35,16 @@ document.addEventListener("click", event => {
         goToContact();
     }
     if (event.target.id === "project-1-link") {
-        window.location = "https://www.milesrowbottom.com/pokedex/database";
+        window.location = "https://miles-rowbottom.github.io/website/pokedex/database";
     }
     if (event.target.id === "project-2-link") {
-        window.location = "https://www.milesrowbottom.com/pokemon/comparison";
+        window.location = "https://miles-rowbottom.github.io/website/pokemon/comparison";
     }
     if (event.target.id === "project-3-link") {
-        window.location = "https://www.milesrowbottom.com/apps/colour_palette";
+        window.location = "https://miles-rowbottom.github.io/website/apps/colour_palette";
     }
     if (event.target.id === "project-4-link") {
-        window.location = "https://www.milesrowbottom.com/apps/random_cocktails";
+        window.location = "https://miles-rowbottom.github.io/website/apps/random_cocktails";
     }
     if (event.target.id === "project-1-code") {
         window.location = "https://github.com/miles-rowbottom/website/tree/master/pokedex";
