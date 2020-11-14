@@ -14,37 +14,6 @@ html, body {
   margin: 20px 40px 20px 40px;
 }
 
-.buttonDiv {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  float: left;
-}
-
-.returnButton {
-  background-color: darkRed;
-  color: white !important;
-  border-radius: 5px;
-  text-align: center;
-  border: none;
-  outline: none;
-  font-size: 18px !important;
-  text-decoration: none;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  transition: 0.25s;
-}
-
-.returnButton:hover {
-  background-color: white;
-  color: black !important;
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-
 .headingBox {
   width: 100%;
   float: left;
