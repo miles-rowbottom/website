@@ -69,7 +69,6 @@ span {
 }
 
 .underline:hover {
-  cursor: pointer;
   background-image: linear-gradient(var(--light) 60%, white 40%);
 }
 
