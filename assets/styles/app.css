@@ -148,6 +148,7 @@ header {
   margin-bottom: 30px;
   position: fixed;
   box-shadow: none;
+  transition: 0.3s;
 }
 
 .menu-button-box {
