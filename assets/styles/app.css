@@ -246,6 +246,7 @@ header {
   color: var(--main);
   background-color: white;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .header-cv-link:hover {
